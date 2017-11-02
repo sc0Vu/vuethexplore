@@ -4,6 +4,7 @@ module.exports = {
   root: true,
   parser: 'babel-eslint',
   parserOptions: {
+    ecmaVersion: 2017,
     sourceType: 'module'
   },
   env: {
@@ -34,6 +35,11 @@ module.exports = {
       'optionalDependencies': ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'space-before-function-paren': ['error', {
+      'anonymous': 'never',
+      'named': 'always',
+      'asyncArrow': 'always'
+    }]
   }
 }
