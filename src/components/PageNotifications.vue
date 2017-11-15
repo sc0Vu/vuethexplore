@@ -15,29 +15,33 @@
 </style>
 
 <template>
-<div class="notifications">
+<div class="notifications" v-show="hasNotifications">
 	<div class="notification" v-for="(notification, index) in notifications" v-bind:key="index" v-bind:class="notification.class">
-	  <button class="delete" v-on:click="remove(index)"></button>
+	  <button class="delete" v-on:click="removeNotification(index)"></button>
 	  {{ notification.text }}
 	</div>
 </div>
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex';
+
 export default {
   name: 'page-notifications',
-  props: {
-    notifications: {
-      type: Array,
-      default () {
-        return [];
+  computed: {
+    ...mapState({
+      notifications (state) {
+        return state.page.notifications;
       },
-    },
+    }),
+    ...mapGetters([
+      'hasNotifications',
+    ]),
   },
   methods: {
-    remove (index) {
-      this.notifications.splice(index, 1);
-    },
+    ...mapActions([
+      'removeNotification',
+    ]),
   },
 };
 </script>
