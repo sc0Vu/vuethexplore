@@ -6,10 +6,17 @@ node_js:
 addons:
   chrome: stable
 
+install:
+  - npm install
+  - npm install -g codecov
+
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
+
+after_success:
+  - codecov --token=92f20e77-5c1c-4f39-ab4b-bac2a5915136
 
 notifications:
   email:

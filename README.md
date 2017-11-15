@@ -1,5 +1,6 @@
 # vuethexplore
 [![Build Status](https://travis-ci.org/sc0Vu/vuethexplore.svg?branch=master)](https://travis-ci.org/sc0Vu/vuethexplore)
+[![codecov](https://codecov.io/gh/sc0Vu/vuethexplore/branch/master/graph/badge.svg)](https://codecov.io/gh/sc0Vu/vuethexplore)
 
 Vue project for ethereum blockchain explore.
 
