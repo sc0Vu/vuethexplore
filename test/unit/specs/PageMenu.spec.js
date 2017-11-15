@@ -1,8 +1,8 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 import PageMenu from '@/components/PageMenu';
 
 describe('PageMenu.vue', () => {
-  const Constructor = Vue.extend(PageMenu);
+  // const Constructor = Vue.extend(PageMenu);
 
   it('should have name page-menu', () => {
     expect(PageMenu.name).to.equal('page-menu');

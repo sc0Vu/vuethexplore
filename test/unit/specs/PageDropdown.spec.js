@@ -1,8 +1,8 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 import PageDropdown from '@/components/PageDropdown';
 
 describe('PageDropdown.vue', () => {
-  const Constructor = Vue.extend(PageDropdown);
+  // const Constructor = Vue.extend(PageDropdown);
 
   it('should have name page-dropdown', () => {
     expect(PageDropdown.name).to.equal('page-dropdown');
