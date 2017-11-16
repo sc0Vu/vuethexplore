@@ -7,14 +7,14 @@ describe('State page', () => {
   it('should notify notification', () => {
     page.mutations.notify(store.state.page, notification);
 
-    expect(page.getters.hasNotifications(store.state.page)).to.equal(true);
+    expect(store.getters.hasNotifications).to.equal(true);
     expect(store.state.page.notifications[0]).deep.equal(notification);
   });
 
   it('should remove notification', () => {
     page.mutations.removeNotification(store.state.page, 0);
 
-    expect(page.getters.hasNotifications(store.state.page)).to.equal(false);
+    expect(store.getters.hasNotifications).to.equal(false);
     expect(store.state.page.notifications).deep.equal([]);
   });
 });
