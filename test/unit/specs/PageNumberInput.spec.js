@@ -13,7 +13,7 @@ describe('PageNumberInput.vue', () => {
 
     expect(props.inputClass.default()).to.equal('input');
     expect(props.inputPlaceholder.default()).to.equal('');
-    expect(props.inputValue.default()).to.equal('');
+    expect(props.inputValue.default()).to.equal(0);
   });
 
   it('should have update', () => {

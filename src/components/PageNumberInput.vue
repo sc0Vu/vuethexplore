@@ -1,5 +1,5 @@
 <template>
-<input type="text" v-bind:class="inputClass" v-bind:placeholder="inputPlaceholder" v-bind:value="inputValue" v-on:change="update(inputValue)">
+<input type="text" v-bind:class="inputClass" v-bind:placeholder="inputPlaceholder" v-bind:value="inputValue" v-on:change="update">
 </template>
 
 <script>
@@ -19,15 +19,15 @@ export default {
       },
     },
     inputValue: {
-      type: String,
+      type: Number,
       default () {
-        return '';
+        return 0;
       },
     },
   },
   methods: {
-    update (value) {
-      this.inputValue = parseInt(value, 10);
+    update (e) {
+      this.$emit('update', parseInt(e.target.value, 10));
     },
   },
 };
