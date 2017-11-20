@@ -139,6 +139,11 @@ export default {
         if (val > config.limitUpperBound || val < config.limitLowerBound) {
           this.notify({ text: `Limit must between ${config.limitLowerBound} and ${config.limitUpperBound}!`, class: 'is-danger' });
           this.limit = oldVal;
+          return;
+        }
+        if (this.from - this.to > this.limit) {
+          this.to = this.from - val;
+          return;
         }
         this.getBlocks(this.from, this.to);
       }
