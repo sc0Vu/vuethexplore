@@ -105,6 +105,11 @@ export default {
       const host = target.dataset.to || target.value || '';
 
       if (this.isHostValid(host) === true) {
+        if (this.host === host) {
+          this.notify({ text: 'Choose another one!', class: 'is-primary' });
+          return;
+        }
+
         this.dropdownText = target.textContent.trim() || 'Custom host';
         this.notify({ text: 'Try to connect to the host, please wait!', class: 'is-primary' });
         this.setHost(host);
