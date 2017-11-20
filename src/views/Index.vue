@@ -4,13 +4,13 @@
   <div v-else>
     <div class="columns">
       <div class="column control">
-        <input class="input" type="text" placeholder="from" v-model="from">
+        <page-number-input placeholder="from" v-bind:inputValue="from" v-on:update="updateFrom"></page-number-input>
       </div>
       <div class="column control">
-        <input class="input" type="text" placeholder="from" v-model="to">
+        <page-number-input placeholder="to" v-bind:inputValue="to" v-on:update="updateTo"></page-number-input>
       </div>
       <div class="column control">
-        <input class="input" type="text" placeholder="from" v-model="limit">
+        <page-number-input placeholder="limit" v-bind:inputValue="limit" v-on:update="updateLimit"></page-number-input>
       </div>
     </div>
     <div>
@@ -28,7 +28,9 @@
         </thead>
         <tbody>
           <tr v-for="block in blocks">
-            <td>{{ block.number }}</td>
+            <td>
+              <router-link v-bind:to="{ name: 'Block', params: { blockNumber: block.number } }">{{ block.number }}</router-link>
+            </td>
             <td><strong>{{ block.transactions.length }}</strong> txns</td>
             <td><strong>{{ block.uncles.length }}</strong> uncles</td>
             <td>{{ block.difficulty }}</td>
@@ -46,9 +48,13 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
 import config from '../config';
+import PageNumberInput from '../components/PageNumberInput';
 
 export default {
   name: 'index',
+  components: {
+    PageNumberInput,
+  },
   data () {
     return {
       limit: 10,
@@ -84,7 +90,7 @@ export default {
       if (from <= to) {
         return this.notify({ text: 'From must bigger than to!', class: 'is-danger' });
       }
-      if (from > (to + parseInt(this.limit, 10))) {
+      if ((from - 1) >= (to + this.limit)) {
         return this.notify({ text: 'From must smaller than to + limit!', class: 'is-danger' });
       }
 
@@ -114,6 +120,15 @@ export default {
       }
       return batch.execute();
     },
+    updateFrom (from) {
+      this.from = from;
+    },
+    updateTo (to) {
+      this.to = to;
+    },
+    updateLimit (limit) {
+      this.limit = limit;
+    },
   },
   watch: {
     blockNumber (val) {
@@ -125,13 +140,25 @@ export default {
       }
     },
     from (val) {
-      if (this.isValidNumber(val) === true && val > this.to && (val - this.to) <= this.limit) {
+      if (
+        this.isValidNumber(val) === true &&
+        val > this.to &&
+        (val - this.to) <= (this.limit - 1)
+        ) {
         this.getBlocks(this.from, this.to);
+      } else {
+        this.notify({ text: 'Please enter correct from or to number!', class: 'is-danger' });
       }
     },
     to (val) {
-      if (this.isValidNumber(val) === true && val < this.from && (this.from - val) <= this.limit) {
+      if (
+        this.isValidNumber(val) === true &&
+        val < this.from &&
+        (this.from - val) <= (this.limit - 1)
+        ) {
         this.getBlocks(this.from, this.to);
+      } else {
+        this.notify({ text: 'Please enter correct from or to number!', class: 'is-danger' });
       }
     },
     limit (val, oldVal) {
@@ -146,6 +173,8 @@ export default {
           return;
         }
         this.getBlocks(this.from, this.to);
+      } else {
+        this.notify({ text: 'Please enter correct limit number!', class: 'is-danger' });
       }
     },
   },
