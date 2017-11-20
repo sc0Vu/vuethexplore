@@ -45,6 +45,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
+import config from '../config';
 
 export default {
   name: 'index',
@@ -133,8 +134,12 @@ export default {
         this.getBlocks(this.from, this.to);
       }
     },
-    limit (val) {
+    limit (val, oldVal) {
       if (this.isValidNumber(val) === true) {
+        if (val > config.limitUpperBound || val < config.limitLowerBound) {
+          this.notify({ text: `Limit must between ${config.limitLowerBound} and ${config.limitUpperBound}!`, class: 'is-danger' });
+          this.limit = oldVal;
+        }
         this.getBlocks(this.from, this.to);
       }
     },

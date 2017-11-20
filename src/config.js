@@ -28,4 +28,7 @@ config.hosts = {
   },
 };
 
+config.limitLowerBound = 10;
+config.limitUpperBound = 200;
+
 module.exports = config;
