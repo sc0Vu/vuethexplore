@@ -18,13 +18,13 @@
             <p>Extra Data: {{ block.extraData }}</p>
             <p>Gas Limit: {{ block.gasLimit }}</p>
             <p>Gas Used: {{ block.gasUsed }}</p>
-            <p>Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: block.hash } }">{{ block.hash }}</router-link></p>
+            <p>Hash: {{ block.hash }}</p>
+            <p>Parent Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: block.parentHash } }">{{ block.parentHash }}</router-link></p>
             <p>Logs Bloom: {{ block.logsBloom }}</p>
             <p>SHA3 Uncles: {{ block.sha3Uncles }}</p>
             <p>Miner: {{ block.miner }}</p>
             <p>Mix Hash: {{ block.mixHash }}</p>
             <p>Nonce: {{ block.nonce }}</p>
-            <p>Parent Hash: {{ block.parentHash }}</p>
             <p>Size: {{ block.size }}</p>
             <time>Timestamp: {{ block.timestamp }} ({{ new Date(block.timestamp * 1000).toString() }})</time>
           </div>
@@ -57,7 +57,9 @@ export default {
     ]),
   },
   created () {
-    this.getBlock(this.$route.params.blockNumber);
+    const blockNumber = this.$route.params.blockNumber;
+
+    this.getBlock(blockNumber);
   },
   methods: {
     ...mapActions([
@@ -85,6 +87,15 @@ export default {
       }).then(() => {
         this.loading = false;
       });
+    },
+  },
+  watch: {
+    $route (to, from) {
+      const blockNumber = to.params.blockNumber;
+
+      if (blockNumber !== from.params.blockNumber) {
+        this.getBlock(blockNumber);
+      }
     },
   },
 };
