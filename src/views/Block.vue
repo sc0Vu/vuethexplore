@@ -15,7 +15,6 @@
             <p>Transaction: <router-link v-bind:to="{ name: 'Transaction', params: { transactionHash: block.transactions[0] } }">{{ block.transactions[0] }}</router-link>, and other {{block.transactions.length - 1 }} transactions</p>
             <p>Difficulty {{ block.difficulty }}</p>
             <p>Total Difficulty: {{ block.totalDifficulty }}</p>
-            <p>Extra Data: {{ block.extraData }}</p>
             <p>Gas Limit: {{ block.gasLimit }}</p>
             <p>Gas Used: {{ block.gasUsed }}</p>
             <p>Hash: {{ block.hash }}</p>
@@ -26,6 +25,7 @@
             <p>Mix Hash: {{ block.mixHash }}</p>
             <p>Nonce: {{ block.nonce }}</p>
             <p>Size: {{ block.size }}</p>
+            <p>Extra Data: {{ toUtf8(block.extraData) }} (Hex: {{ block.extraData }})</p>
             <time>Timestamp: {{ block.timestamp }} ({{ new Date(block.timestamp * 1000).toString() }})</time>
           </div>
         </div>
@@ -75,6 +75,10 @@ export default {
       return false;
     },
     getBlock (blockNumber) {
+      if (!this.connected) {
+        this.notify({ text: 'Please choose the host to connect blockchain!', class: 'is-danger' });
+        return;
+      }
       if (!this.isValidBlockNumber(blockNumber)) {
         this.notify({ text: 'Block number is not valid!', class: 'is-danger' });
         return;
@@ -87,6 +91,9 @@ export default {
       }).then(() => {
         this.loading = false;
       });
+    },
+    toUtf8 (hex) {
+      return this.web3.utils.toUtf8(hex);
     },
   },
   watch: {
