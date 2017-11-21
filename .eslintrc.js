@@ -40,6 +40,8 @@ module.exports = {
       'anonymous': 'never',
       'named': 'always',
       'asyncArrow': 'always'
-    }]
+    }],
+    // cannot watch route object even with this
+    // 'quote-props': ["error", "as-needed", { "unnecessary": false }],
   }
 }

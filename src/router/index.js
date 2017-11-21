@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '@/views/Index';
+
+// router views
+const Index = () => import('@/views/Index');
+const Block = () => import('@/views/Block');
 
 Vue.use(Router);
 
@@ -12,6 +15,10 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: Index,
+    }, {
+      path: '/block/:blockNumber',
+      name: 'Block',
+      component: Block,
     },
   ],
 });
