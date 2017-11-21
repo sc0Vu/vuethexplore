@@ -12,13 +12,13 @@
         </header>
         <div class="card-content">
           <div class="content" style="word-wrap: break-word;">
-            <p>Transaction: {{ block.transactions[0] }}, and other {{block.transactions.length - 1 }} transactions</p>
+            <p>Transaction: <router-link v-bind:to="{ name: 'Transaction', params: { transactionHash: block.transactions[0] } }">{{ block.transactions[0] }}</router-link>, and other {{block.transactions.length - 1 }} transactions</p>
             <p>Difficulty {{ block.difficulty }}</p>
             <p>Total Difficulty: {{ block.totalDifficulty }}</p>
             <p>Extra Data: {{ block.extraData }}</p>
             <p>Gas Limit: {{ block.gasLimit }}</p>
             <p>Gas Used: {{ block.gasUsed }}</p>
-            <p>Hash: {{ block.hash }}</p>
+            <p>Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: block.hash } }">{{ block.hash }}</router-link></p>
             <p>Logs Bloom: {{ block.logsBloom }}</p>
             <p>SHA3 Uncles: {{ block.sha3Uncles }}</p>
             <p>Miner: {{ block.miner }}</p>
