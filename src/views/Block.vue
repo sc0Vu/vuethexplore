@@ -67,11 +67,14 @@ export default {
       if (/^[\d]+$/.test(blockNumber)) {
         return true;
       }
+      if (/^0x[0-9a-f]{64}$/.test(blockNumber)) {
+        return true;
+      }
       return false;
     },
     getBlock (blockNumber) {
       if (!this.isValidBlockNumber(blockNumber)) {
-        this.notify({ text: 'From must bigger than to!', class: 'is-danger' });
+        this.notify({ text: 'Block number is not valid!', class: 'is-danger' });
         return;
       }
 
