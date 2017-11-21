@@ -1,9 +1,8 @@
 <template>
 <div class="section">
   <div v-if="!connected">Please choose the host to connect blockchain!</div>
-  <div v-if="error">Error! Message: {{ errorMessage }}</div>
-  <div v-if="loading && connected">Loading! </div>
-  <div v-if="connected && !loading && !error">
+  <div v-if="connected && loading">Loading! </div>
+  <div v-if="connected && !loading">
     <div class="columns">
       <div class="column control">
         <page-number-input placeholder="from" v-bind:inputValue="from" v-on:update="updateFrom"></page-number-input>
@@ -64,8 +63,6 @@ export default {
       to: 0,
       blocks: [],
       loading: false,
-      error: false,
-      errorMessage: '',
     };
   },
   computed: {
