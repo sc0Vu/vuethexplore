@@ -1,7 +1,9 @@
 <template>
 <div class="section">
-  <div v-if="!connected">Please choose the host to connect blockchain! </div>
-  <div v-else>
+  <div v-if="!connected">Please choose the host to connect blockchain!</div>
+  <div v-if="error">Error! Message: {{ errorMessage }}</div>
+  <div v-if="loading && connected">Loading! </div>
+  <div v-if="connected && !loading && !error">
     <div class="columns">
       <div class="column control">
         <page-number-input placeholder="from" v-bind:inputValue="from" v-on:update="updateFrom"></page-number-input>
@@ -61,6 +63,9 @@ export default {
       from: 0,
       to: 0,
       blocks: [],
+      loading: false,
+      error: false,
+      errorMessage: '',
     };
   },
   computed: {
@@ -88,14 +93,17 @@ export default {
     },
     getBlocks (from, to) {
       if (from <= to) {
-        return this.notify({ text: 'From must bigger than to!', class: 'is-danger' });
+        this.notify({ text: 'From must bigger than to!', class: 'is-danger' });
+        return;
       }
       if ((from - 1) >= (to + this.limit)) {
-        return this.notify({ text: 'From must smaller than to + limit!', class: 'is-danger' });
+        this.notify({ text: 'From must smaller than to + limit!', class: 'is-danger' });
+        return;
       }
 
       // clear blocks
       this.blocks = [];
+      this.loading = true;
 
       // use batch instead
       // for (let i = from; i >= to; i -= 1) {
@@ -107,18 +115,29 @@ export default {
       //   });
       // }
 
+      let count = 0;
+      const total = from - to;
       const batch = new this.web3.BatchRequest();
       const callback = function callback (err, block) {
         if (err) {
-          return this.notify({ text: `Failed to get block! Error: ${err.message}`, class: 'is-danger' });
+          this.notify({ text: `Failed to get block! Error: ${err.message}`, class: 'is-danger' });
+          return;
         }
-        return this.blocks.push(block);
+
+        this.blocks.push(block);
+
+        // due to batch execute return null
+        // we use count to check batch state
+        if (count >= total) {
+          this.loading = false;
+        }
+        count += 1;
       };
 
       for (let i = from; i >= to; i -= 1) {
         batch.add(this.web3.eth.getBlock.request(i, callback.bind(this)));
       }
-      return batch.execute();
+      batch.execute();
     },
     updateFrom (from) {
       this.from = from;
@@ -134,9 +153,11 @@ export default {
     blockNumber (val) {
       if (val !== this.from) {
         this.from = val;
-        this.to = val - parseInt(this.limit, 10);
-        this.to += 1;
-        this.getBlocks(this.from, this.to);
+        this.$nextTick(() => {
+          this.to = val - this.limit;
+          this.to += 1;
+        });
+        // this.getBlocks(this.from, this.to);
       }
     },
     from (val) {
