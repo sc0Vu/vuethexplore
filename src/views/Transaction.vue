@@ -81,7 +81,6 @@ export default {
 
       this.web3.eth.getTransactionReceipt(transactionHash).then((transaction) => {
         this.transaction = transaction;
-        console.log(transaction);
       }).catch((err) => {
         this.notify({ text: `Failed to get transaction ${transactionHash}! Error: ${err.message}`, class: 'is-danger' });
       }).then(() => {
