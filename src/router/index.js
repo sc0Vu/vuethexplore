@@ -17,18 +17,30 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: Index,
+      meta: {
+        title: 'Index',
+      },
     }, {
       path: '/block/:blockNumber',
       name: 'Block',
       component: Block,
+      meta: {
+        title: 'Block',
+      },
     }, {
       path: '/transaction/:transactionHash',
       name: 'Transaction',
       component: Transaction,
+      meta: {
+        title: 'Transaction',
+      },
     }, {
       path: '/address/:address',
       name: 'Address',
       component: Address,
+      meta: {
+        title: 'Address',
+      },
     },
   ],
 });
