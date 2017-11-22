@@ -5,6 +5,7 @@ import Router from 'vue-router';
 const Index = () => import('@/views/Index');
 const Block = () => import('@/views/Block');
 const Transaction = () => import('@/views/Transaction');
+const Address = () => import('@/views/Address');
 
 Vue.use(Router);
 
@@ -24,6 +25,10 @@ export default new Router({
       path: '/transaction/:transactionHash',
       name: 'Transaction',
       component: Transaction,
+    }, {
+      path: '/address/:address',
+      name: 'Address',
+      component: Address,
     },
   ],
 });

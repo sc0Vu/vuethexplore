@@ -15,8 +15,8 @@
             <p>Block Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockHash } }">{{ transaction.blockHash }}</router-link></p>
             <p>Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockNumber } }">{{ transaction.blockNumber 
             }}</router-link></p>
-            <p>From: {{ transaction.from }}</p>
-            <p>To: {{ transaction.to }}</p>
+            <p>From: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.from } }">{{ transaction.from }}</router-link></p>
+            <p>To: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.to } }">{{ transaction.to }}</router-link></p>
             <p>Status: {{ transaction.status }}</p>
             <p>Contract Address: {{ (transaction.contractAddress) ? transaction.contractAddress : 'Not contract transaction.' }}</p>
             <p>Logs: <span v-html="logs"></span></p>
@@ -68,7 +68,7 @@ export default {
       'notify',
     ]),
     isValidTransactionHash (transactionHash) {
-      if (/^0x[0-9a-f]{64}$/.test(transactionHash)) {
+      if (/^0x[0-9a-fA-F]{64}$/.test(transactionHash)) {
         return true;
       }
       return false;

@@ -32,7 +32,7 @@
               <p>Parent Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: block.parentHash } }">{{ block.parentHash }}</router-link></p>
               <p>Logs Bloom: {{ block.logsBloom }}</p>
               <p>SHA3 Uncles: {{ block.sha3Uncles }}</p>
-              <p>Miner: {{ block.miner }}</p>
+              <p>Miner: <router-link v-bind:to="{ name: 'Address', params: { address: block.miner } }">{{ block.miner }}</router-link></p>
               <p>Mix Hash: {{ block.mixHash }}</p>
               <p>Nonce: {{ block.nonce }}</p>
               <p>Size: {{ block.size }}</p>
@@ -87,7 +87,7 @@ export default {
       if (/^[\d]+$/.test(blockNumber)) {
         return true;
       }
-      if (/^0x[0-9a-f]{64}$/.test(blockNumber)) {
+      if (/^0x[0-9a-fA-F]{64}$/.test(blockNumber)) {
         return true;
       }
       return false;
