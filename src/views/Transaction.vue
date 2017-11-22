@@ -1,9 +1,9 @@
 <template>
-<div class="section">
+<div>
   <div v-if="!connected">Please choose the host to connect blockchain! </div>
   <div v-if="connected && loading">Loading! </div>
   <div v-if="connected && !loading">
-    <div class="columns">
+    <div class="section">
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">
