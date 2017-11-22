@@ -26,3 +26,7 @@ Vue project for ethereum blockchain explore.
 3. all
 
     npm run test
+
+# Demo
+
+Deployed on heroku (build branch): [demo](https://vuethexplore.herokuapp.com/)
