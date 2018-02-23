@@ -15,6 +15,12 @@ describe('State blockchain', () => {
     expect(store.getters.version.length > 0).to.equal(true);
   });
 
+  it('should has isBeta', () => {
+    const version = store.getters.version;
+
+    expect(store.getters.isBeta).to.equal(version.indexOf('beta') >= 0);
+  });
+
   it('should connected', (done) => {
     expect(store.getters.connected).to.equal(false);
 

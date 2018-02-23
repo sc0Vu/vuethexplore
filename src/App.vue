@@ -16,6 +16,9 @@
         <div>
           <h1 class="title">Vuethexplore - vue + ethereum blockchain explore.</h1>
           <h2 class="subtitle">
+            <template v-if="isBeta">
+              <strong>Notice: the web3 is in beta version!</strong><br>
+            </template>
             Web3 <strong>{{ version }}</strong> status: <strong>{{ (connected === true) ? 'connected' : 'not connected' }}</strong>.
             <template v-if="host">
               <br>Host: <strong>{{ host }}</strong>
@@ -83,7 +86,7 @@ export default {
       },
     }),
     ...mapGetters([
-      'version', 'connected',
+      'version', 'connected', 'isBeta',
     ]),
   },
   created () {
