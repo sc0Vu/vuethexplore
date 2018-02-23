@@ -21,7 +21,7 @@ describe('State blockchain', () => {
     store.state.blockchain.web3.eth.getBlockNumber().then((bn) => {
       expect(bn > 0).to.equal(true);
       expect(store.getters.connected).to.equal(true);
-    }).catch((err) => {
+    }).catch(() => {
       expect(store.getters.connected).to.equal(true);
     }).then(() => {
       done();
