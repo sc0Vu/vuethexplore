@@ -30,5 +30,9 @@ config.hosts = {
 
 config.limitLowerBound = 10;
 config.limitUpperBound = 200;
+config.hostStorageKey = 'vuethexplore-host';
+config.blockFromStorageKey = 'vuethexplore-from';
+config.blockToStorageKey = 'vuethexplore-to';
+config.blockLimitStorageKey = 'vuethexplore-limit';
 
 module.exports = config;

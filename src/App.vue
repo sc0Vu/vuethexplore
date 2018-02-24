@@ -60,6 +60,7 @@ import PageDropdown from '@/components/PageDropdown';
 import PageNotifications from '@/components/PageNotifications';
 import config from '@/config';
 import { mapState, mapGetters, mapActions } from 'vuex';
+import storage from '@/modules/storage';
 
 export default {
   name: 'app',
@@ -99,11 +100,51 @@ export default {
       });
     });
     this.dropdownItems = items;
+
+    if (storage.isExist(config.hostStorageKey)) {
+      const host = storage.getItem(config.hostStorageKey);
+
+      this.selectHost(host);
+    }
   },
   mounted () {
     this.notify({ text: 'You can use this explore on ethereum based blockchain, if you have any question, please open an issue on github!', class: 'is-info' });
   },
   methods: {
+    selectHost (host) {
+      if (this.isHostValid(host) === true) {
+        if (this.host === host) {
+          this.notify({ text: 'Choose another one!', class: 'is-primary' });
+          return;
+        }
+
+        // get host dropdown text
+        let network = {};
+
+        Object.keys(config.hosts).forEach((key) => {
+          if (config.hosts[key].rpcUri === host) {
+            network = config.hosts[key];
+            network.key = key;
+          }
+        });
+
+        if (network.key !== undefined) {
+          this.dropdownText = (network.test === true) ? `${network.key} test net` : `${network.key} net`;
+        } else {
+          this.dropdownText = 'Custom host';
+        }
+        this.notify({ text: 'Try to connect to the host, please wait!', class: 'is-primary' });
+        this.setHost(host);
+        this.web3.eth.getBlockNumber().then((bn) => {
+          this.setBlockNumber(bn);
+          this.notify({ text: 'Connect to the host successfully!', class: 'is-success' });
+        }).catch((err) => {
+          this.notify({ text: `Something wrong happened! Error: ${err.message}`, class: 'is-danger' });
+        });
+      } else {
+        this.notify({ text: 'Host saved in storage wasn\' valid!', class: 'is-danger' });
+      }
+    },
     changeHost (target) {
       const host = target.dataset.to || target.value || '';
 
@@ -116,6 +157,7 @@ export default {
         this.dropdownText = target.textContent.trim() || 'Custom host';
         this.notify({ text: 'Try to connect to the host, please wait!', class: 'is-primary' });
         this.setHost(host);
+        storage.setItem(config.hostStorageKey, host);
         this.web3.eth.getBlockNumber().then((bn) => {
           this.setBlockNumber(bn);
           this.notify({ text: 'Connect to the host successfully!', class: 'is-success' });
