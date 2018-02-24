@@ -48,8 +48,9 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
-import config from '../config';
-import PageNumberInput from '../components/PageNumberInput';
+import config from '@/config';
+import PageNumberInput from '@/components/PageNumberInput';
+import storage from '@/modules/storage';
 
 export default {
   name: 'index',
@@ -77,6 +78,17 @@ export default {
     ...mapGetters([
       'connected',
     ]),
+  },
+  created () {
+    if (storage.isExist(config.blockFromStorageKey) === true) {
+      this.from = storage.getItem(config.blockFromStorageKey);
+    }
+    if (storage.isExist(config.blockToStorageKey) === true) {
+      this.to = storage.getItem(config.blockToStorageKey);
+    }
+    if (storage.isExist(config.blockLimitStorageKey) === true) {
+      this.limit = storage.getItem(config.blockLimitStorageKey);
+    }
   },
   methods: {
     ...mapActions([
@@ -135,15 +147,22 @@ export default {
         batch.add(this.web3.eth.getBlock.request(i, callback.bind(this)));
       }
       batch.execute();
+
+      // save from and in to storage
+      storage.setItem(config.blockFromStorageKey, from);
+      storage.setItem(config.blockToStorageKey, to);
     },
     updateFrom (from) {
       this.from = from;
+      storage.setItem(config.blockFromStorageKey, from);
     },
     updateTo (to) {
       this.to = to;
+      storage.setItem(config.blockToStorageKey, to);
     },
     updateLimit (limit) {
       this.limit = limit;
+      storage.setItem(config.blockLimitStorageKey, limit);
     },
   },
   watch: {
@@ -186,6 +205,7 @@ export default {
           this.limit = oldVal;
           return;
         }
+        storage.setItem(config.blockLimitStorageKey, val);
         if (this.from - this.to > this.limit) {
           this.to = this.from - val;
           return;
