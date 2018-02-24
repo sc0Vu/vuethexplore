@@ -18,7 +18,9 @@ const storage = {
   },
   isExist (key) {
     // if value is boolean false, it return string false
-    return this.getItem(key) !== false;
+    const item = this.getItem(key);
+
+    return item !== false && item !== undefined && item !== null;
   },
 };
 
