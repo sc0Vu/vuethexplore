@@ -133,14 +133,18 @@ export default {
           return;
         }
 
-        this.blocks.push(block);
-
         // due to batch execute return null
         // we use count to check batch state
         if (count >= total) {
           this.loading = false;
         }
         count += 1;
+
+        // should we use this: block === null || block === undefined
+        if (!block) {
+          return;
+        }
+        this.blocks.push(block);
       };
 
       for (let i = from; i >= to; i -= 1) {
