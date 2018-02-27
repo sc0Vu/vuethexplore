@@ -60,7 +60,6 @@ import PageDropdown from '@/components/PageDropdown';
 import PageNotifications from '@/components/PageNotifications';
 import config from '@/config';
 import { mapState, mapGetters, mapActions } from 'vuex';
-import storage from '@/modules/storage';
 
 export default {
   name: 'app',
@@ -101,8 +100,8 @@ export default {
     });
     this.dropdownItems = items;
 
-    if (storage.isExist(config.hostStorageKey)) {
-      const host = storage.getItem(config.hostStorageKey);
+    if (this.$storage.isExist(config.hostStorageKey)) {
+      const host = this.$storage.getItem(config.hostStorageKey);
 
       this.selectHost(host);
     }
@@ -157,7 +156,7 @@ export default {
         this.dropdownText = target.textContent.trim() || 'Custom host';
         this.notify({ text: 'Try to connect to the host, please wait!', class: 'is-primary' });
         this.setHost(host);
-        storage.setItem(config.hostStorageKey, host);
+        this.$storage.setItem(config.hostStorageKey, host);
         this.web3.eth.getBlockNumber().then((bn) => {
           this.setBlockNumber(bn);
           this.notify({ text: 'Connect to the host successfully!', class: 'is-success' });
