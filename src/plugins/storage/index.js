@@ -1,6 +1,6 @@
 const storagePlugun = {};
 
-storagePlugun.install = function(Vue, options) {
+storagePlugun.install = function install (Vue, options) {
   const opts = Object.assign({
     module: 'localStorage',
   }, options);
