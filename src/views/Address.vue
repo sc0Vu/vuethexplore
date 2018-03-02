@@ -12,7 +12,8 @@
         </header>
         <div class="card-content">
           <div class="content" style="word-wrap: break-word;">
-            <p>Balance: {{ balance }}</p>
+            <p>Balance in wei: {{ balance }}</p>
+            <p>Balance in ether: {{ web3.utils.fromWei(balance, 'ether') }}</p>
             <p>Code: {{ code }}</p>
           </div>
         </div>
