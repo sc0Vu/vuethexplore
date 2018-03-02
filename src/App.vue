@@ -16,6 +16,9 @@
         <div>
           <h1 class="title">Vuethexplore - vue + ethereum blockchain explore.</h1>
           <h2 class="subtitle">
+            <template v-if="isBeta">
+              <strong>Notice: the web3 is in beta version!</strong><br>
+            </template>
             Web3 <strong>{{ version }}</strong> status: <strong>{{ (connected === true) ? 'connected' : 'not connected' }}</strong>.
             <template v-if="host">
               <br>Host: <strong>{{ host }}</strong>
@@ -83,7 +86,7 @@ export default {
       },
     }),
     ...mapGetters([
-      'version', 'connected',
+      'version', 'connected', 'isBeta',
     ]),
   },
   created () {
@@ -96,11 +99,51 @@ export default {
       });
     });
     this.dropdownItems = items;
+
+    if (this.$storage.isExist(config.hostStorageKey)) {
+      const host = this.$storage.getItem(config.hostStorageKey);
+
+      this.selectHost(host);
+    }
   },
   mounted () {
     this.notify({ text: 'You can use this explore on ethereum based blockchain, if you have any question, please open an issue on github!', class: 'is-info' });
   },
   methods: {
+    selectHost (host) {
+      if (this.isHostValid(host) === true) {
+        if (this.host === host) {
+          this.notify({ text: 'Choose another one!', class: 'is-primary' });
+          return;
+        }
+
+        // get host dropdown text
+        let network = {};
+
+        Object.keys(config.hosts).forEach((key) => {
+          if (config.hosts[key].rpcUri === host) {
+            network = config.hosts[key];
+            network.key = key;
+          }
+        });
+
+        if (network.key !== undefined) {
+          this.dropdownText = (network.test === true) ? `${network.key} test net` : `${network.key} net`;
+        } else {
+          this.dropdownText = 'Custom host';
+        }
+        this.notify({ text: 'Try to connect to the host, please wait!', class: 'is-primary' });
+        this.setHost(host);
+        this.web3.eth.getBlockNumber().then((bn) => {
+          this.setBlockNumber(bn);
+          this.notify({ text: 'Connect to the host successfully!', class: 'is-success' });
+        }).catch((err) => {
+          this.notify({ text: `Something wrong happened! Error: ${err.message}`, class: 'is-danger' });
+        });
+      } else {
+        this.notify({ text: 'Host saved in storage wasn\' valid!', class: 'is-danger' });
+      }
+    },
     changeHost (target) {
       const host = target.dataset.to || target.value || '';
 
@@ -113,6 +156,7 @@ export default {
         this.dropdownText = target.textContent.trim() || 'Custom host';
         this.notify({ text: 'Try to connect to the host, please wait!', class: 'is-primary' });
         this.setHost(host);
+        this.$storage.setItem(config.hostStorageKey, host);
         this.web3.eth.getBlockNumber().then((bn) => {
           this.setBlockNumber(bn);
           this.notify({ text: 'Connect to the host successfully!', class: 'is-success' });

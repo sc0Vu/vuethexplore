@@ -112,7 +112,14 @@ export default {
       });
     },
     toUtf8 (hex) {
-      return this.web3.utils.toUtf8(hex);
+      let utf8 = '';
+
+      try {
+        utf8 = this.web3.utils.toUtf8(hex);
+      } catch (e) {
+        utf8 = hex;
+      }
+      return utf8;
     },
     isSelected (tab) {
       if (/^[\w]+$/.test(tab) === false) {

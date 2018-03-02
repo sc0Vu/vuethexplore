@@ -16,7 +16,12 @@ const getters = {
     return web3.currentProvider.connected;
   },
   version ({ web3 }) {
-    return web3.version;
+    return web3.version || Web3.version;
+  },
+  isBeta ({ web3 }) {
+    const version = web3.version || Web3.version;
+
+    return version.indexOf('beta') >= 0;
   },
 };
 

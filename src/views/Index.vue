@@ -48,8 +48,8 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
-import config from '../config';
-import PageNumberInput from '../components/PageNumberInput';
+import config from '@/config';
+import PageNumberInput from '@/components/PageNumberInput';
 
 export default {
   name: 'index',
@@ -77,6 +77,17 @@ export default {
     ...mapGetters([
       'connected',
     ]),
+  },
+  created () {
+    if (this.$storage.isExist(config.blockFromStorageKey) === true) {
+      this.from = this.$storage.getItem(config.blockFromStorageKey);
+    }
+    if (this.$storage.isExist(config.blockToStorageKey) === true) {
+      this.to = this.$storage.getItem(config.blockToStorageKey);
+    }
+    if (this.$storage.isExist(config.blockLimitStorageKey) === true) {
+      this.limit = this.$storage.getItem(config.blockLimitStorageKey);
+    }
   },
   methods: {
     ...mapActions([
@@ -121,29 +132,40 @@ export default {
           return;
         }
 
-        this.blocks.push(block);
-
         // due to batch execute return null
         // we use count to check batch state
         if (count >= total) {
           this.loading = false;
         }
         count += 1;
+
+        // should we use this: block === null || block === undefined
+        if (!block) {
+          return;
+        }
+        this.blocks.push(block);
       };
 
       for (let i = from; i >= to; i -= 1) {
         batch.add(this.web3.eth.getBlock.request(i, callback.bind(this)));
       }
       batch.execute();
+
+      // save from and in to storage
+      this.$storage.setItem(config.blockFromStorageKey, from);
+      this.$storage.setItem(config.blockToStorageKey, to);
     },
     updateFrom (from) {
       this.from = from;
+      this.$storage.setItem(config.blockFromStorageKey, from);
     },
     updateTo (to) {
       this.to = to;
+      this.$storage.setItem(config.blockToStorageKey, to);
     },
     updateLimit (limit) {
       this.limit = limit;
+      this.$storage.setItem(config.blockLimitStorageKey, limit);
     },
   },
   watch: {
@@ -186,6 +208,7 @@ export default {
           this.limit = oldVal;
           return;
         }
+        this.$storage.setItem(config.blockLimitStorageKey, val);
         if (this.from - this.to > this.limit) {
           this.to = this.from - val;
           return;

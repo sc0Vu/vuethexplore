@@ -42,6 +42,15 @@ export default {
       isShow: false,
     };
   },
+  mounted () {
+    const clickCallback = function clickCallback () {
+      if (this.isShow === true) {
+        this.toggleDropdown();
+      }
+    }.bind(this);
+
+    this.$root.$el.addEventListener('click', clickCallback, true);
+  },
   methods: {
     toggleDropdown () {
       this.isShow = this.isShow !== true;

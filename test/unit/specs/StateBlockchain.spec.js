@@ -15,13 +15,19 @@ describe('State blockchain', () => {
     expect(store.getters.version.length > 0).to.equal(true);
   });
 
+  it('should has isBeta', () => {
+    const version = store.getters.version;
+
+    expect(store.getters.isBeta).to.equal(version.indexOf('beta') >= 0);
+  });
+
   it('should connected', (done) => {
     expect(store.getters.connected).to.equal(false);
 
     store.state.blockchain.web3.eth.getBlockNumber().then((bn) => {
       expect(bn > 0).to.equal(true);
       expect(store.getters.connected).to.equal(true);
-    }).catch((err) => {
+    }).catch(() => {
       expect(store.getters.connected).to.equal(true);
     }).then(() => {
       done();
