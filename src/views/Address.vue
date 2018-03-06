@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
   <div v-if="!connected">Please choose the host to connect blockchain! </div>
   <div v-if="connected && loading">Loading! </div>
   <div v-if="connected && !loading">
@@ -15,6 +15,7 @@
             <p>Balance in wei: {{ balance }}</p>
             <p>Balance in ether: {{ web3.utils.fromWei(balance, 'ether') }}</p>
             <p>Code: {{ code }}</p>
+            <!-- <p v-if="addressQRCodeURI"><img v-bind:src="addressQRCodeURI"></p> -->
           </div>
         </div>
       </div>
@@ -25,6 +26,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
+import QRCode from 'qrcode';
 
 export default {
   name: 'address',
@@ -33,6 +35,7 @@ export default {
       address: '',
       code: '',
       loading: true,
+      addressQRCodeURI: '',
     };
   },
   computed: {
@@ -50,6 +53,18 @@ export default {
 
     this.address = address;
     this.getAddress(address);
+  },
+  mounted () {
+    this.$nextTick(() => {
+      QRCode.toDataURL(this.address)
+            .then((dataURI) => {
+              this.addressQRCodeURI = dataURI;
+              this.notify({ text: 'Render qrcode successfully!', class: 'is-info' });
+            })
+            .catch((err) => {
+              this.notify({ text: `Failed to render qrcode! Error: ${err.message}`, class: 'is-danger' });
+            });
+    });
   },
   methods: {
     ...mapActions([
