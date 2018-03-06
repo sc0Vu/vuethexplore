@@ -36,7 +36,9 @@
   <section class="section">
     <div class="container">
       <div class="level-right">
-      <page-dropdown class="is-right" v-bind:buttonText="dropdownText" v-bind:items="dropdownItems" v-on:itemclick="changeHost" v-on:inputChanged="changeHost"></page-dropdown>
+        <button class="button is-small is-primary" v-on:click.prevent.self="previousPage">Previous</button>
+        <button class="button is-small is-info" v-on:click.prevent.self="nextPage">Next</button>
+        <page-dropdown class="is-right" v-bind:buttonText="dropdownText" v-bind:items="dropdownItems" v-on:itemclick="changeHost" v-on:inputChanged="changeHost"></page-dropdown>
       </div>
     </div>
   </section>
@@ -176,6 +178,12 @@ export default {
         return false;
       }
       return /https?:\/\/([\w.]+):?([\d]+)?/.test(host);
+    },
+    previousPage () {
+      this.$router.history.go(-1);
+    },
+    nextPage () {
+      this.$router.history.go(1);
     },
     ...mapActions([
       'notify', 'setHost', 'setBlockNumber',
