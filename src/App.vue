@@ -35,10 +35,10 @@
 
   <section class="section">
     <div class="container">
-      <div class="level-right">
+      <div class="">
         <button class="button is-small is-primary" v-on:click.prevent.self="previousPage">Previous</button>
         <button class="button is-small is-info" v-on:click.prevent.self="nextPage">Next</button>
-        <page-dropdown class="is-right" v-bind:buttonText="dropdownText" v-bind:items="dropdownItems" v-on:itemclick="changeHost" v-on:inputChanged="changeHost"></page-dropdown>
+        <page-dropdown class="" v-bind:buttonText="dropdownText" v-bind:items="dropdownItems" v-on:itemclick="changeHost" v-on:inputChanged="changeHost"></page-dropdown>
       </div>
     </div>
   </section>
