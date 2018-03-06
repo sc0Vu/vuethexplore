@@ -1,5 +1,5 @@
 <template>
-<div class="section">
+<div class="container">
   <div v-if="!connected">Please choose the host to connect blockchain!</div>
   <div v-if="connected && loading">Loading! </div>
   <div v-if="connected && !loading">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div>
-      <table class="table is-bordered">
+      <table class="table is-bordered is-hoverable is-fullwidth">
         <thead>
           <tr>
             <th>Block Number</th>

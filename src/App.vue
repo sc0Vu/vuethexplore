@@ -9,40 +9,44 @@
 
 <template>
 <div id="app">
-  <div class="container">
+  <div class="container" v-if="menuItems.length > 0">
     <page-menu v-bind:items="menuItems"></page-menu>
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div>
-          <h1 class="title">Vuethexplore - vue + ethereum blockchain explore.</h1>
-          <h2 class="subtitle">
-            <template v-if="isBeta">
-              <strong>Notice: the web3 is in beta version!</strong><br>
-            </template>
-            Web3 <strong>{{ version }}</strong> status: <strong>{{ (connected === true) ? 'connected' : 'not connected' }}</strong>.
-            <template v-if="host">
-              <br>Host: <strong>{{ host }}</strong>
-            </template>
-            <template v-if="blockNumber">
-              <br>Latest block number: <strong>{{ blockNumber }}</strong>
-            </template>
-          </h2>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="level-right">
-        <page-dropdown class="is-right" v-bind:buttonText="dropdownText" v-bind:items="dropdownItems" v-on:itemclick="changeHost" v-on:inputChanged="changeHost"></page-dropdown>
-      </div>
-    </section>
-    <section class="section">
-      <div>
-        <transition appear>
-          <router-view></router-view>
-        </transition>
-      </div>
-    </section>
   </div>
+
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div>
+        <h1 class="title">Vuethexplore - vue + ethereum blockchain explore.</h1>
+        <h2 class="subtitle">
+          <template v-if="isBeta">
+            <strong>Notice: the web3 is in beta version!</strong><br>
+          </template>
+          Web3 <strong>{{ version }}</strong> status: <strong>{{ (connected === true) ? 'connected' : 'not connected' }}</strong>.
+          <template v-if="host">
+            <br>Host: <strong>{{ host }}</strong>
+          </template>
+          <template v-if="blockNumber">
+            <br>Latest block number: <strong>{{ blockNumber }}</strong>
+          </template>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="level-right">
+      <page-dropdown class="is-right" v-bind:buttonText="dropdownText" v-bind:items="dropdownItems" v-on:itemclick="changeHost" v-on:inputChanged="changeHost"></page-dropdown>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <transition appear>
+      <router-view></router-view>
+    </transition>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <p>Made with <span class="bd-emoji">❤️</span> by <strong><a href="https://blog.ptrgl.com/" target="_blank">Petar Lai</a></strong></p>

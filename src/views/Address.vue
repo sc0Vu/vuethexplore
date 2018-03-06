@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
   <div v-if="!connected">Please choose the host to connect blockchain! </div>
   <div v-if="connected && loading">Loading! </div>
   <div v-if="connected && !loading">
