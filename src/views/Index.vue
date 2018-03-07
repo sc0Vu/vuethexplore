@@ -1,7 +1,16 @@
+<style scoped>
+  .loading .button {
+    border: none;
+  }
+  .loading .button:hover {
+    cursor: initial;
+  }
+</style>
+
 <template>
 <div class="container">
   <div v-if="!connected">Please choose the host to connect blockchain!</div>
-  <div v-if="connected && loading">Loading! </div>
+  <div class="loading" v-if="connected && loading"><span class="button is-loading"></span><span class="button">Loading!</span></div>
   <div v-if="connected && !loading">
     <div class="columns">
       <div class="column control">
