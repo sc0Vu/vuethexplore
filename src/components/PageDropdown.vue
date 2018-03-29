@@ -1,3 +1,11 @@
+<style scoped>
+.is-active .dropdown-trigger .button {
+  /* bulma setting */
+  border-color: #3273dc;
+  color: #363636;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+</style>
 <template>
 <div class="dropdown" v-bind:class="{'is-active': isShow}">
   <div class="dropdown-trigger">
