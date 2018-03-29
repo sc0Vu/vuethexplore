@@ -17,4 +17,12 @@ describe('State page', () => {
     expect(store.getters.hasNotifications).to.equal(false);
     expect(store.state.page.notifications).deep.equal([]);
   });
+
+  it('should set loading to false', () => {
+    expect(store.state.page.loading).to.equal(true);
+
+    page.mutations.setLoading(store.state.page, false);
+
+    expect(store.state.page.loading).to.equal(false);
+  });
 });
