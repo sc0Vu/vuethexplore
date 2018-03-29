@@ -15,7 +15,10 @@
     <div class="section">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">
+          <p class="card-header-title" v-if="isContractAddress">
+            Contract Address #{{ address }}
+          </p>
+          <p class="card-header-title" v-else>
             Address #{{ address }}
           </p>
         </header>
@@ -23,7 +26,9 @@
           <div class="content" style="word-wrap: break-word;">
             <p>Balance in wei: {{ balance }}</p>
             <p>Balance in ether: {{ web3.utils.fromWei(balance, 'ether') }}</p>
-            <p>Code: {{ code }}</p>
+            <p v-if="isContractAddress">Code: 
+              <pre>{{ code }}</pre>
+            </p>
             <p v-if="addressQRCodeURI"><img v-bind:src="addressQRCodeURI"></p>
           </div>
         </div>
@@ -56,6 +61,9 @@ export default {
     ...mapGetters([
       'connected',
     ]),
+    isContractAddress () {
+      return this.code !== '' && this.code !== '0x';
+    },
   },
   created () {
     const address = this.$route.params.address;
