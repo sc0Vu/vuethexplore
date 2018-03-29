@@ -22,8 +22,7 @@
         <div class="card-content">
           <div class="content" style="word-wrap: break-word;">
             <p>Block Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockHash } }">{{ transaction.blockHash }}</router-link></p>
-            <p>Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockNumber } }">{{ transaction.blockNumber 
-            }}</router-link></p>
+            <p>Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockNumber } }">{{ transaction.blockNumber }}</router-link></p>
             <p>From: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.from } }">{{ transaction.from }}</router-link></p>
             <p>To: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.to } }">{{ transaction.to }}</router-link></p>
             <p>Status: {{ transaction.status }}</p>
@@ -38,8 +37,7 @@
                     Selected log: {{ selectedLog.logIndex }}<br>
                     Address: {{ selectedLog.address }}<br>
                     Block Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: selectedLog.blockHash } }">{{ selectedLog.blockHash }}</router-link><br>
-                    Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: selectedLog.blockNumber } }">{{ selectedLog.blockNumber 
-                  }}</router-link><br>
+                    Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: selectedLog.blockNumber } }">{{ selectedLog.blockNumber }}</router-link><br>
                     Data: {{ selectedLog.data }}<br>
                     Removed: {{ selectedLog.removed }}<br>
                     Topics: {{ selectedLog.topics }}<br>
