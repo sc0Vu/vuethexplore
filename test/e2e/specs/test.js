@@ -19,7 +19,7 @@ module.exports = {
     if (Web3.version.indexOf('beta') >= 0) {
       browser.assert.containsText('h2', 'Notice: the web3 is in beta version!');
     }
-    browser.assert.containsText('h2', 'Web3 ' + Web3.version + ' status: not connected.');
+    browser.assert.containsText('h2', `Web3 ${Web3.version} status: not connected.`);
     browser.assert.containsText('button.is-primary', 'Previous');
     browser.assert.containsText('button.is-info', 'Next');
     browser.assert.containsText('.dropdown-trigger > button', 'Choose blockchain');

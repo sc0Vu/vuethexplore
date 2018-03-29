@@ -48,7 +48,6 @@ export default {
     return {
       address: '',
       code: '',
-      loading: true,
       addressQRCodeURI: '',
     };
   },
@@ -56,6 +55,9 @@ export default {
     ...mapState({
       web3 (state) {
         return state.blockchain.web3;
+      },
+      loading (state) {
+        return state.page.loading;
       },
     }),
     ...mapGetters([
@@ -85,7 +87,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'notify',
+      'notify', 'setLoading',
     ]),
     isValidAddress (address) {
       if (/^0x[0-9a-fA-F]{40}$/.test(address)) {
@@ -94,7 +96,22 @@ export default {
       return false;
     },
     getAddress (address) {
+      this.setLoading(true);
+
+      // if (!this.connected) {
+      //   this.$nextTick(() => {
+      //     this.setLoading(false);
+      //   });
+      //   this.notify({
+      //     text: 'Please choose the host to connect blockchain!',
+      //     class: 'is-danger'
+      //   });
+      //   return;
+      // }
       if (!this.isValidAddress(address)) {
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
         this.notify({ text: 'Address is not valid!', class: 'is-danger' });
         return;
       }
@@ -116,12 +133,15 @@ export default {
     },
     getAddressCode (address) {
       return this.web3.eth.getCode.request(address, (err, code) => {
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
+
         if (err) {
           this.notify({ text: `Failed to get code ${address}! Error: ${err.message}`, class: 'is-danger' });
           return;
         }
         this.code = code;
-        this.loading = false;
       });
     },
   },

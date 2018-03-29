@@ -67,7 +67,6 @@ export default {
   data () {
     return {
       transaction: {},
-      loading: true,
       selectedLog: {},
     };
   },
@@ -75,6 +74,9 @@ export default {
     ...mapState({
       web3 (state) {
         return state.blockchain.web3;
+      },
+      loading (state) {
+        return state.page.loading;
       },
     }),
     ...mapGetters([
@@ -94,7 +96,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'notify',
+      'notify', 'setLoading',
     ]),
     isValidTransactionHash (transactionHash) {
       if (/^0x[0-9a-fA-F]{64}$/.test(transactionHash)) {
@@ -103,7 +105,20 @@ export default {
       return false;
     },
     getTransaction (transactionHash) {
+      this.setLoading(true);
+
+      // if (!this.connected) {
+      //   this.$nextTick(() => {
+      //     this.setLoading(false);
+      //   });
+      //   this.notify({
+      //     text: 'Please choose the host to connect blockchain!',
+      //     class: 'is-danger'
+      //   });
+      //   return;
+      // }
       if (!this.isValidTransactionHash(transactionHash)) {
+        this.setLoading(false);
         this.notify({ text: 'Transaction hash is not valid!', class: 'is-danger' });
         return;
       }
@@ -113,7 +128,9 @@ export default {
       }).catch((err) => {
         this.notify({ text: `Failed to get transaction ${transactionHash}! Error: ${err.message}`, class: 'is-danger' });
       }).then(() => {
-        this.loading = false;
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
       });
     },
     selectLog (log) {
