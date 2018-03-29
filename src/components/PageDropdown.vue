@@ -40,17 +40,27 @@ export default {
   data () {
     return {
       isShow: false,
+      // skipElements: [
+      //   'input', 'textarea',
+      // ],
     };
   },
-  mounted () {
-    const clickCallback = function clickCallback () {
-      if (this.isShow === true) {
-        this.toggleDropdown();
-      }
-    }.bind(this);
+  // mounted () {
+  //   const clickCallback = function clickCallback (e) {
+  //     e.preventDefault();
 
-    this.$root.$el.addEventListener('click', clickCallback, true);
-  },
+  //     const target = e.target;
+
+  //     if (
+  //       this.isShow === true &&
+  //       this.skipElements.indexOf(target.tagName.toLowerCase()) === -1
+  //     ) {
+  //       this.toggleDropdown();
+  //     }
+  //   }.bind(this);
+
+  //   this.$root.$el.addEventListener('click', clickCallback, true);
+  // },
   methods: {
     toggleDropdown () {
       this.isShow = this.isShow !== true;
