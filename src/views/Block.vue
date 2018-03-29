@@ -1,7 +1,16 @@
+<style scoped>
+  .loading .button {
+    border: none;
+  }
+  .loading .button:hover {
+    cursor: initial;
+  }
+</style>
+
 <template>
 <div class="container">
   <div v-if="!connected">Please choose the host to connect blockchain! </div>
-  <div v-if="connected && loading">Loading! </div>
+  <div class="loading" v-if="connected && loading"><span class="button is-loading"></span><span class="button">Loading!</span></div>
   <div v-if="connected && !loading">
     <div class="section">
       <div class="card">
@@ -60,7 +69,6 @@ export default {
   data () {
     return {
       block: {},
-      loading: true,
       selected: '',
     };
   },
@@ -68,6 +76,9 @@ export default {
     ...mapState({
       web3 (state) {
         return state.blockchain.web3;
+      },
+      loading (state) {
+        return state.page.loading;
       },
     }),
     ...mapGetters([
@@ -81,7 +92,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'notify',
+      'notify', 'setLoading',
     ]),
     isValidBlockNumber (blockNumber) {
       if (/^[\d]+$/.test(blockNumber)) {
@@ -93,11 +104,22 @@ export default {
       return false;
     },
     getBlock (blockNumber) {
-      if (!this.connected) {
-        this.notify({ text: 'Please choose the host to connect blockchain!', class: 'is-danger' });
-        return;
-      }
+      this.setLoading(true);
+
+      // if (!this.connected) {
+      //   this.$nextTick(() => {
+      //     this.setLoading(false);
+      //   });
+      //   this.notify({
+      //     text: 'Please choose the host to connect blockchain!',
+      //     class: 'is-danger'
+      //   });
+      //   return;
+      // }
       if (!this.isValidBlockNumber(blockNumber)) {
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
         this.notify({ text: 'Block number is not valid!', class: 'is-danger' });
         return;
       }
@@ -108,7 +130,9 @@ export default {
         this.notify({ text: `Failed to get block ${blockNumber}! Error: ${err.message}`, class: 'is-danger' });
       }).then(() => {
         this.select('information');
-        this.loading = false;
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
       });
     },
     toUtf8 (hex) {

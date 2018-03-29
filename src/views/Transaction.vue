@@ -1,7 +1,16 @@
+<style scoped>
+  .loading .button {
+    border: none;
+  }
+  .loading .button:hover {
+    cursor: initial;
+  }
+</style>
+
 <template>
 <div class="container">
   <div v-if="!connected">Please choose the host to connect blockchain! </div>
-  <div v-if="connected && loading">Loading! </div>
+  <div class="loading" v-if="connected && loading"><span class="button is-loading"></span><span class="button">Loading!</span></div>
   <div v-if="connected && !loading">
     <div class="section">
       <div class="card">
@@ -13,8 +22,7 @@
         <div class="card-content">
           <div class="content" style="word-wrap: break-word;">
             <p>Block Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockHash } }">{{ transaction.blockHash }}</router-link></p>
-            <p>Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockNumber } }">{{ transaction.blockNumber 
-            }}</router-link></p>
+            <p>Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: transaction.blockNumber } }">{{ transaction.blockNumber }}</router-link></p>
             <p>From: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.from } }">{{ transaction.from }}</router-link></p>
             <p>To: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.to } }">{{ transaction.to }}</router-link></p>
             <p>Status: {{ transaction.status }}</p>
@@ -29,8 +37,7 @@
                     Selected log: {{ selectedLog.logIndex }}<br>
                     Address: {{ selectedLog.address }}<br>
                     Block Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: selectedLog.blockHash } }">{{ selectedLog.blockHash }}</router-link><br>
-                    Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: selectedLog.blockNumber } }">{{ selectedLog.blockNumber 
-                  }}</router-link><br>
+                    Block Number: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: selectedLog.blockNumber } }">{{ selectedLog.blockNumber }}</router-link><br>
                     Data: {{ selectedLog.data }}<br>
                     Removed: {{ selectedLog.removed }}<br>
                     Topics: {{ selectedLog.topics }}<br>
@@ -60,7 +67,6 @@ export default {
   data () {
     return {
       transaction: {},
-      loading: true,
       selectedLog: {},
     };
   },
@@ -68,6 +74,9 @@ export default {
     ...mapState({
       web3 (state) {
         return state.blockchain.web3;
+      },
+      loading (state) {
+        return state.page.loading;
       },
     }),
     ...mapGetters([
@@ -87,7 +96,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'notify',
+      'notify', 'setLoading',
     ]),
     isValidTransactionHash (transactionHash) {
       if (/^0x[0-9a-fA-F]{64}$/.test(transactionHash)) {
@@ -96,7 +105,20 @@ export default {
       return false;
     },
     getTransaction (transactionHash) {
+      this.setLoading(true);
+
+      // if (!this.connected) {
+      //   this.$nextTick(() => {
+      //     this.setLoading(false);
+      //   });
+      //   this.notify({
+      //     text: 'Please choose the host to connect blockchain!',
+      //     class: 'is-danger'
+      //   });
+      //   return;
+      // }
       if (!this.isValidTransactionHash(transactionHash)) {
+        this.setLoading(false);
         this.notify({ text: 'Transaction hash is not valid!', class: 'is-danger' });
         return;
       }
@@ -106,7 +128,9 @@ export default {
       }).catch((err) => {
         this.notify({ text: `Failed to get transaction ${transactionHash}! Error: ${err.message}`, class: 'is-danger' });
       }).then(() => {
-        this.loading = false;
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
       });
     },
     selectLog (log) {

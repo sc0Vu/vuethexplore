@@ -1,7 +1,16 @@
+<style scoped>
+  .loading .button {
+    border: none;
+  }
+  .loading .button:hover {
+    cursor: initial;
+  }
+</style>
+
 <template>
 <div class="container">
   <div v-if="!connected">Please choose the host to connect blockchain!</div>
-  <div v-if="connected && loading">Loading! </div>
+  <div class="loading" v-if="connected && loading"><span class="button is-loading"></span><span class="button">Loading!</span></div>
   <div v-if="connected && !loading">
     <div class="columns">
       <div class="column control">
@@ -62,7 +71,6 @@ export default {
       from: 0,
       to: 0,
       blocks: [],
-      loading: false,
     };
   },
   computed: {
@@ -72,6 +80,9 @@ export default {
       },
       web3 (state) {
         return state.blockchain.web3;
+      },
+      loading (state) {
+        return state.page.loading;
       },
     }),
     ...mapGetters([
@@ -91,7 +102,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'notify',
+      'notify', 'setLoading',
     ]),
     isValidNumber (number) {
       if (/^[\d]+$/.test(number)) {
@@ -100,18 +111,25 @@ export default {
       return false;
     },
     getBlocks (from, to) {
+      this.setLoading(true);
+
       if (from <= to) {
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
         this.notify({ text: 'From must bigger than to!', class: 'is-danger' });
         return;
       }
       if ((from - 1) >= (to + this.limit)) {
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
         this.notify({ text: 'From must smaller than to + limit!', class: 'is-danger' });
         return;
       }
 
       // clear blocks
       this.blocks = [];
-      this.loading = true;
 
       // use batch instead
       // for (let i = from; i >= to; i -= 1) {
@@ -123,10 +141,14 @@ export default {
       //   });
       // }
 
-      let count = 0;
-      const total = from - to;
+      // let count = 0;
+      // const total = from - to;
       const batch = new this.web3.BatchRequest();
       const callback = function callback (err, block) {
+        this.$nextTick(() => {
+          this.setLoading(false);
+        });
+
         if (err) {
           this.notify({ text: `Failed to get block! Error: ${err.message}`, class: 'is-danger' });
           return;
@@ -134,10 +156,10 @@ export default {
 
         // due to batch execute return null
         // we use count to check batch state
-        if (count >= total) {
-          this.loading = false;
-        }
-        count += 1;
+        // if (count >= total) {
+        //   this.setLoading(false);
+        // }
+        // count += 1;
 
         // should we use this: block === null || block === undefined
         if (!block) {

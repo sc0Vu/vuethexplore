@@ -1,6 +1,7 @@
 // initial state
 const state = {
   notifications: [],
+  loading: true,
 };
 
 // getters
@@ -18,6 +19,9 @@ const actions = {
   removeNotification ({ commit }, index) {
     commit('removeNotification', index);
   },
+  setLoading ({ commit }, loading) {
+    commit('setLoading', loading);
+  },
 };
 
 // mutations
@@ -27,6 +31,9 @@ const mutations = {
   },
   removeNotification ({ notifications }, index) {
     notifications.splice(index, 1);
+  },
+  setLoading ({ loading }, isLoading) {
+    state.loading = isLoading;
   },
 };
 

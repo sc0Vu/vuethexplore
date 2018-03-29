@@ -1,3 +1,11 @@
+<style scoped>
+.is-active .dropdown-trigger .button {
+  /* bulma setting */
+  border-color: #3273dc;
+  color: #363636;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+</style>
 <template>
 <div class="dropdown" v-bind:class="{'is-active': isShow}">
   <div class="dropdown-trigger">
@@ -40,17 +48,27 @@ export default {
   data () {
     return {
       isShow: false,
+      // skipElements: [
+      //   'input', 'textarea',
+      // ],
     };
   },
-  mounted () {
-    const clickCallback = function clickCallback () {
-      if (this.isShow === true) {
-        this.toggleDropdown();
-      }
-    }.bind(this);
+  // mounted () {
+  //   const clickCallback = function clickCallback (e) {
+  //     e.preventDefault();
 
-    this.$root.$el.addEventListener('click', clickCallback, true);
-  },
+  //     const target = e.target;
+
+  //     if (
+  //       this.isShow === true &&
+  //       this.skipElements.indexOf(target.tagName.toLowerCase()) === -1
+  //     ) {
+  //       this.toggleDropdown();
+  //     }
+  //   }.bind(this);
+
+  //   this.$root.$el.addEventListener('click', clickCallback, true);
+  // },
   methods: {
     toggleDropdown () {
       this.isShow = this.isShow !== true;
