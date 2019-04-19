@@ -5,10 +5,12 @@ describe('State blockchain', () => {
   const host = 'https://infuranet.infura.io/vuethexplore';
   const blockNumber = 1;
 
-  it('should set host', () => {
+  it('should set host and connected', () => {
+    expect(store.getters.connected).to.equal(false);
     blockchain.mutations.setHost(store.state.blockchain, host);
 
     expect(store.state.blockchain.host).to.equal(host);
+    expect(store.getters.connected).to.equal(true);
   });
 
   it('should has version', () => {
@@ -21,17 +23,13 @@ describe('State blockchain', () => {
     expect(store.getters.isBeta).to.equal(version.indexOf('beta') >= 0);
   });
 
-  it('should connected', (done) => {
+  it('should disconnected', () => {
+    // disconnect
+    blockchain.mutations.disconnect(store.state.blockchain);
     expect(store.getters.connected).to.equal(false);
-
-    store.state.blockchain.web3.eth.getBlockNumber().then((bn) => {
-      expect(bn > 0).to.equal(true);
-      expect(store.getters.connected).to.equal(true);
-    }).catch(() => {
-      expect(store.getters.connected).to.equal(true);
-    }).then(() => {
-      done();
-    });
+    expect(store.state.blockchain.web3).to.deep.equal({});
+    expect(store.state.blockchain.host).to.equal(null);
+    expect(store.state.blockchain.blockNumber).to.equal(0);
   });
 
   it('should set block number', () => {
