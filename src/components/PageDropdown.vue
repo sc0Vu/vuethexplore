@@ -76,9 +76,11 @@ export default {
     },
     itemClicked (e) {
       this.$emit('itemclick', e.target);
+      this.toggleDropdown();
     },
     inputChanged (e) {
       this.$emit('inputChanged', e.target);
+      // this.toggleDropdown();
     },
   },
 };
