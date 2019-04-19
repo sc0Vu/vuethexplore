@@ -1,4 +1,5 @@
 const Web3 = require('web3');
+const { version } = require('web3/package.json');
 
 // initial state
 const state = {
@@ -16,12 +17,12 @@ const getters = {
     return web3.currentProvider.connected;
   },
   version ({ web3 }) {
-    return web3.version || Web3.version;
+    return web3.version || Web3.version || version;
   },
   isBeta ({ web3 }) {
-    const version = web3.version || Web3.version;
+    const web3Version = web3.version || Web3.version || version;
 
-    return version.indexOf('beta') >= 0;
+    return web3Version.indexOf('beta') >= 0;
   },
 };
 
@@ -33,6 +34,9 @@ const actions = {
   setBlockNumber ({ commit }, blockNumber) {
     commit('setBlockNumber', blockNumber);
   },
+  disconnect ({ commit }) {
+    commit('disconnect');
+  },
 };
 
 // mutations
@@ -41,15 +45,25 @@ const mutations = {
     if (host === newHost) {
       return;
     }
+    const provider = new Web3.providers.HttpProvider(newHost);
     state.host = newHost;
 
     if (web3.eth === undefined) {
-      state.web3 = new Web3();
+      state.web3 = new Web3(provider);
+    } else {
+      state.web3.setProvider(provider);
     }
-    state.web3.setProvider(new Web3.providers.HttpProvider(newHost));
   },
   setBlockNumber ({ blockNumber }, newBlockNumber) {
     state.blockNumber = newBlockNumber;
+  },
+  disconnect ({ web3 }) {
+    if (web3 && web3.currentProvider !== undefined) {
+      web3.currentProvider.disconnect();
+      state.web3 = {};
+      state.host = null;
+      state.blockNumber = 0;
+    }
   },
 };
 
