@@ -23,7 +23,7 @@
               <li v-bind:class="{ 'is-active': isSelected('information') }">
                 <a v-on:click="select('information')">Information</a>
               </li>
-              <li v-bind:class="{ 'is-active': isSelected('transactions') }">
+              <li v-show="hasTransaction" v-bind:class="{ 'is-active': isSelected('transactions') }">
                 <a v-on:click="select('transactions')">Transactions</a>
               </li>
             </ul>
@@ -32,7 +32,7 @@
         <div class="card-content">
           <div class="content" style="word-wrap: break-word;">
             <div v-show="isSelected('information')">
-              <p>Transaction: <router-link v-bind:to="{ name: 'Transaction', params: { transactionHash: block.transactions[0] } }">{{ block.transactions[0] }}</router-link>, and other {{block.transactions.length - 1 }} transactions</p>
+              <p v-show="hasTransaction">Transaction: <router-link v-bind:to="{ name: 'Transaction', params: { transactionHash: block.transactions[0] } }">{{ block.transactions[0] }}</router-link>, and other {{block.transactions.length - 1 }} transactions</p>
               <p>Difficulty {{ block.difficulty }}</p>
               <p>Total Difficulty: {{ block.totalDifficulty }}</p>
               <p>Gas Limit: {{ block.gasLimit }}</p>
@@ -84,6 +84,9 @@ export default {
     ...mapGetters([
       'connected',
     ]),
+    hasTransaction () {
+      return (this.block.transactions !== undefined) ? (this.block.transactions.length > 0) : false;
+    },
   },
   created () {
     const blockNumber = this.$route.params.blockNumber;
