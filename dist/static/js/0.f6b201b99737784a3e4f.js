@@ -1,5 +1,16 @@
 webpackJsonp([0],{
 
+/***/ "+4m/":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain! ")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',[_c('div',{staticClass:"card"},[_c('header',{staticClass:"card-header"},[(_vm.isContractAddress)?_c('p',{staticClass:"card-header-title"},[_vm._v("\n            Contract Address #"+_vm._s(_vm.address)+"\n          ")]):_c('p',{staticClass:"card-header-title"},[_vm._v("\n            Address #"+_vm._s(_vm.address)+"\n          ")])]),_vm._v(" "),_c('div',{staticClass:"card-content"},[_c('div',{staticClass:"content",staticStyle:{"word-wrap":"break-word"}},[_c('p',[_vm._v("Balance in wei: "+_vm._s(_vm.balance))]),_vm._v(" "),_c('p',[_vm._v("Balance in ether: "+_vm._s(_vm.web3.utils.fromWei(_vm.balance, 'ether')))]),_vm._v(" "),(_vm.isContractAddress)?_c('p',[_vm._v("Code: \n              "),_c('pre',[_vm._v(_vm._s(_vm.code))])]):_vm._e(),_vm._v(" "),(_vm.addressQRCodeURI)?_c('p',[_c('img',{attrs:{"src":_vm.addressQRCodeURI}})]):_vm._e()])])])])]):_vm._e()])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+
 /***/ "/rwO":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7,9 +18,9 @@ webpackJsonp([0],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Address_vue__ = __webpack_require__("e75Y");
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6436b310_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Address_vue__ = __webpack_require__("mE10");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2bfb808a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Address_vue__ = __webpack_require__("+4m/");
 function injectStyle (ssrContext) {
-  __webpack_require__("OqBt")
+  __webpack_require__("23Wy")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -22,12 +33,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-6436b310"
+var __vue_scopeId__ = "data-v-2bfb808a"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Address_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6436b310_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Address_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2bfb808a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Address_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -47,7 +58,7 @@ var ECCode = __webpack_require__("Sd0T")
 var ECLevel = __webpack_require__("utyv")
 var Mode = __webpack_require__("uF9H")
 var VersionCheck = __webpack_require__("yYhy")
-var isArray = __webpack_require__("sOR5")
+var isArray = __webpack_require__("Dsid")
 
 // Generator polynomial used to encode version information
 var G18 = (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0)
@@ -207,6 +218,20 @@ exports.getEncodedBits = function getEncodedBits (version) {
   return (version << 12) | d
 }
 
+
+/***/ }),
+
+/***/ "23Wy":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("M674");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__("rjj0")("08e72f02", content, true, {});
 
 /***/ }),
 
@@ -585,7 +610,19 @@ module.exports = BitBuffer
 
 /***/ }),
 
-/***/ "FB7p":
+/***/ "Dsid":
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};
+
+
+/***/ }),
+
+/***/ "M674":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("FZ+f")(true);
@@ -593,7 +630,7 @@ exports = module.exports = __webpack_require__("FZ+f")(true);
 
 
 // module
-exports.push([module.i, ".loading .button[data-v-6436b310]{border:none}.loading .button[data-v-6436b310]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/peterlai/vuethexplore/src/views/Address.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Address.vue","sourcesContent":["\n.loading .button[data-v-6436b310] {\n  border: none;\n}\n.loading .button[data-v-6436b310]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, ".loading .button[data-v-2bfb808a]{border:none}.loading .button[data-v-2bfb808a]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/peterlai/Desktop/Projects/vuethexplore/src/views/Address.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Address.vue","sourcesContent":["\n.loading .button[data-v-2bfb808a] {\n  border: none;\n}\n.loading .button[data-v-2bfb808a]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -603,15 +640,10 @@ exports.push([module.i, ".loading .button[data-v-6436b310]{border:none}.loading 
 /***/ "NV47":
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__("jF+B")
+var BufferUtil = __webpack_require__("jF+B")
 
-if(Buffer.alloc) { 
-  var EXP_TABLE = Buffer.alloc(512)
-  var LOG_TABLE = Buffer.alloc(256)
-} else {
-  var EXP_TABLE = new Buffer(512)
-  var LOG_TABLE = new Buffer(256)
-}
+var EXP_TABLE = BufferUtil.alloc(512)
+var LOG_TABLE = BufferUtil.alloc(256)
 /**
  * Precompute the log and anti-log tables for faster computation later
  *
@@ -721,20 +753,6 @@ exports.testAlphanumeric = function testAlphanumeric (str) {
 
 /***/ }),
 
-/***/ "OqBt":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("FB7p");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__("rjj0")("15c8ef3b", content, true, {});
-
-/***/ }),
-
 /***/ "RO0P":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -804,7 +822,7 @@ module.exports = AlphanumericData
 /***/ "RY9c":
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__("jF+B")
+var BufferUtil = __webpack_require__("jF+B")
 
 /**
  * Helper class to handle QR Code symbol modules
@@ -817,10 +835,8 @@ function BitMatrix (size) {
   }
 
   this.size = size
-  this.data = new Buffer(size * size)
-  this.data.fill(0)
-  this.reservedBit = new Buffer(size * size)
-  this.reservedBit.fill(0)
+  this.data = BufferUtil.alloc(size * size)
+  this.reservedBit = BufferUtil.alloc(size * size)
 }
 
 /**
@@ -1022,7 +1038,7 @@ exports.getTotalCodewordsCount = function getTotalCodewordsCount (version, error
 /***/ "WEzc":
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__("jF+B")
+var BufferUtil = __webpack_require__("jF+B")
 var Utils = __webpack_require__("oLzS")
 var ECLevel = __webpack_require__("utyv")
 var BitBuffer = __webpack_require__("DEuz")
@@ -1036,7 +1052,7 @@ var Version = __webpack_require__("1Y2G")
 var FormatInfo = __webpack_require__("xR/K")
 var Mode = __webpack_require__("uF9H")
 var Segments = __webpack_require__("nyx9")
-var isArray = __webpack_require__("sOR5")
+var isArray = __webpack_require__("Dsid")
 
 /**
  * QRCode for JavaScript
@@ -1351,7 +1367,7 @@ function createCodewords (bitBuffer, version, errorCorrectionLevel) {
   var dcData = new Array(ecTotalBlocks)
   var ecData = new Array(ecTotalBlocks)
   var maxDataSize = 0
-  var buffer = new Buffer(bitBuffer.buffer)
+  var buffer = BufferUtil.from(bitBuffer.buffer)
 
   // Divide the buffer into the required number of blocks
   for (var b = 0; b < ecTotalBlocks; b++) {
@@ -1369,7 +1385,7 @@ function createCodewords (bitBuffer, version, errorCorrectionLevel) {
 
   // Create final data
   // Interleave the data and error correction codewords from each block
-  var data = new Buffer(totalCodewords)
+  var data = BufferUtil.alloc(totalCodewords)
   var index = 0
   var i, r
 
@@ -1528,7 +1544,7 @@ exports.create = function create (data, options) {
 /***/ "X0RI":
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__("jF+B")
+var BufferUtil = __webpack_require__("jF+B")
 var GF = __webpack_require__("NV47")
 
 /**
@@ -1539,8 +1555,7 @@ var GF = __webpack_require__("NV47")
  * @return {Buffer}    Product of p1 and p2
  */
 exports.mul = function mul (p1, p2) {
-  var coeff = new Buffer(p1.length + p2.length - 1)
-  coeff.fill(0)
+  var coeff = BufferUtil.alloc(p1.length + p2.length - 1)
 
   for (var i = 0; i < p1.length; i++) {
     for (var j = 0; j < p2.length; j++) {
@@ -1559,7 +1574,7 @@ exports.mul = function mul (p1, p2) {
  * @return {Buffer}          Remainder
  */
 exports.mod = function mod (divident, divisor) {
-  var result = new Buffer(divident)
+  var result = BufferUtil.from(divident)
 
   while ((result.length - divisor.length) >= 0) {
     var coeff = result[0]
@@ -1585,7 +1600,7 @@ exports.mod = function mod (divident, divisor) {
  * @return {Buffer}        Buffer containing polynomial coefficients
  */
 exports.generateECPolynomial = function generateECPolynomial (degree) {
-  var poly = new Buffer([1])
+  var poly = BufferUtil.from([1])
   for (var i = 0; i < degree; i++) {
     poly = exports.mul(poly, [1, GF.exp(i)])
   }
@@ -1987,7 +2002,7 @@ module.exports = function () {
 
 
 
-var isArray = __webpack_require__("sOR5")
+var isArray = __webpack_require__("Dsid")
 
 function typedArraySupport () {
   // Can typed array instances be augmented?
@@ -2489,7 +2504,15 @@ Buffer.isBuffer = function isBuffer (b) {
   return !!(b != null && b._isBuffer)
 }
 
-module.exports = Buffer
+module.exports.alloc = function (size) {
+  var buffer = new Buffer(size)
+  buffer.fill(0)
+  return buffer
+}
+
+module.exports.from = function (data) {
+  return new Buffer(data)
+}
 
 
 /***/ }),
@@ -2735,21 +2758,14 @@ exports.getBestMask = function getBestMask (data, setupFormatFunc) {
 
 /***/ }),
 
-/***/ "mE10":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain! ")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',{staticClass:"section"},[_c('div',{staticClass:"card"},[_c('header',{staticClass:"card-header"},[(_vm.isContractAddress)?_c('p',{staticClass:"card-header-title"},[_vm._v("\n            Contract Address #"+_vm._s(_vm.address)+"\n          ")]):_c('p',{staticClass:"card-header-title"},[_vm._v("\n            Address #"+_vm._s(_vm.address)+"\n          ")])]),_vm._v(" "),_c('div',{staticClass:"card-content"},[_c('div',{staticClass:"content",staticStyle:{"word-wrap":"break-word"}},[_c('p',[_vm._v("Balance in wei: "+_vm._s(_vm.balance))]),_vm._v(" "),_c('p',[_vm._v("Balance in ether: "+_vm._s(_vm.web3.utils.fromWei(_vm.balance, 'ether')))]),_vm._v(" "),(_vm.isContractAddress)?_c('p',[_vm._v("Code: \n              "),_c('pre',[_vm._v(_vm._s(_vm.code))])]):_vm._e(),_vm._v(" "),(_vm.addressQRCodeURI)?_c('p',[_c('img',{attrs:{"src":_vm.addressQRCodeURI}})]):_vm._e()])])])])]):_vm._e()])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
 /***/ "nwDn":
 /***/ (function(module, exports) {
 
 function hex2rgba (hex) {
+  if (typeof hex === 'number') {
+    hex = hex.toString()
+  }
+
   if (typeof hex !== 'string') {
     throw new Error('Color should be defined as hex string')
   }
@@ -3253,18 +3269,6 @@ exports.toSJIS = function toSJIS (kanji) {
 
 /***/ }),
 
-/***/ "sOR5":
-/***/ (function(module, exports) {
-
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
-
-
-/***/ }),
-
 /***/ "sYKs":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3549,12 +3553,12 @@ exports.from = function from (value, defaultValue) {
 /***/ "vPzN":
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__("jF+B")
+var BufferUtil = __webpack_require__("jF+B")
 var Mode = __webpack_require__("uF9H")
 
 function ByteData (data) {
   this.mode = Mode.BYTE
-  this.data = new Buffer(data)
+  this.data = BufferUtil.from(data)
 }
 
 ByteData.getBitsLength = function getBitsLength (length) {
@@ -3583,8 +3587,9 @@ module.exports = ByteData
 /***/ "wBZN":
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__("jF+B")
+var BufferUtil = __webpack_require__("jF+B")
 var Polynomial = __webpack_require__("X0RI")
+var Buffer = __webpack_require__("63KW").Buffer
 
 function ReedSolomonEncoder (degree) {
   this.genPoly = undefined
@@ -3618,8 +3623,7 @@ ReedSolomonEncoder.prototype.encode = function encode (data) {
 
   // Calculate EC for this data block
   // extends data size to data+genPoly size
-  var pad = new Buffer(this.degree)
-  pad.fill(0)
+  var pad = BufferUtil.alloc(this.degree)
   var paddedData = Buffer.concat([data, pad], data.length + this.degree)
 
   // The error correction codewords are the remainder after dividing the data codewords
@@ -3631,8 +3635,7 @@ ReedSolomonEncoder.prototype.encode = function encode (data) {
   // pad with 0s to the left to reach the needed number of coefficients
   var start = this.degree - remainder.length
   if (start > 0) {
-    var buff = new Buffer(this.degree)
-    buff.fill(0)
+    var buff = BufferUtil.alloc(this.degree)
     remainder.copy(buff, start)
 
     return buff
@@ -3760,4 +3763,4 @@ module.exports = KanjiData
 /***/ })
 
 });
-//# sourceMappingURL=0.51761b9a5d27558110ed.js.map
+//# sourceMappingURL=0.f6b201b99737784a3e4f.js.map

@@ -46,28 +46,43 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ "aze2":
+/***/ "QS8o":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain!")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',{staticClass:"columns"},[_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"from","inputValue":_vm.from},on:{"update":_vm.updateFrom}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"to","inputValue":_vm.to},on:{"update":_vm.updateTo}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"limit","inputValue":_vm.limit},on:{"update":_vm.updateLimit}})],1)]),_vm._v(" "),_c('div',[_c('table',{staticClass:"table is-bordered is-hoverable is-fullwidth"},[_vm._m(0),_vm._v(" "),_c('tbody',_vm._l((_vm.blocks),function(block){return _c('tr',[_c('td',[_c('router-link',{attrs:{"to":{ name: 'Block', params: { blockNumber: block.number } }}},[_vm._v(_vm._s(block.number))])],1),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.transactions.length))]),_vm._v(" txns")]),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.uncles.length))]),_vm._v(" uncles")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.difficulty))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasLimit))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasUsed))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.miner))])])}),0)])])]):_vm._e()])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain!")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',{staticClass:"columns"},[_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"from","inputValue":_vm.from},on:{"update":_vm.updateFrom}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"to","inputValue":_vm.to},on:{"update":_vm.updateTo}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"limit","inputValue":_vm.limit},on:{"update":_vm.updateLimit}})],1)]),_vm._v(" "),_c('div',{staticClass:"table-container"},[_c('table',{staticClass:"table is-bordered is-hoverable is-fullwidth"},[_vm._m(0),_vm._v(" "),_c('tbody',_vm._l((_vm.blocks),function(block){return _c('tr',[_c('td',[_c('router-link',{attrs:{"to":{ name: 'Block', params: { blockNumber: block.number } }}},[_vm._v(_vm._s(block.number))])],1),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.transactions.length))]),_vm._v(" txns")]),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.uncles.length))]),_vm._v(" uncles")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.difficulty))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasLimit))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasUsed))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.miner))])])}),0)])])]):_vm._e()])}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',[_vm._v("Block Number")]),_vm._v(" "),_c('th',[_vm._v("Transactions")]),_vm._v(" "),_c('th',[_vm._v("Uncles")]),_vm._v(" "),_c('th',[_vm._v("Difficulty")]),_vm._v(" "),_c('th',[_vm._v("Gas Limit")]),_vm._v(" "),_c('th',[_vm._v("Gas Used")]),_vm._v(" "),_c('th',[_vm._v("Miner")])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
-/***/ "dQYH":
+/***/ "Qy5i":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("FZ+f")(true);
+// imports
+
+
+// module
+exports.push([module.i, ".loading .button[data-v-08f037b8]{border:none}.loading .button[data-v-08f037b8]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/peterlai/Desktop/Projects/vuethexplore/src/views/Index.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Index.vue","sourcesContent":["\n.loading .button[data-v-08f037b8] {\n  border: none;\n}\n.loading .button[data-v-08f037b8]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "VtZl":
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__("xzVA");
+var content = __webpack_require__("Qy5i");
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__("rjj0")("60994f90", content, true, {});
+var update = __webpack_require__("rjj0")("55b3cb48", content, true, {});
 
 /***/ }),
 
@@ -78,9 +93,9 @@ var update = __webpack_require__("rjj0")("60994f90", content, true, {});
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__ = __webpack_require__("tk/L");
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_de723c04_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("aze2");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_08f037b8_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("QS8o");
 function injectStyle (ssrContext) {
-  __webpack_require__("dQYH")
+  __webpack_require__("VtZl")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -93,12 +108,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-de723c04"
+var __vue_scopeId__ = "data-v-08f037b8"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_de723c04_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_08f037b8_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -204,24 +219,33 @@ var Component = normalizeComponent(
     web3: function web3(state) {
       return state.blockchain.web3;
     },
+    host: function host(state) {
+      return state.blockchain.host;
+    },
     loading: function loading(state) {
       return state.page.loading;
+    },
+    keyPrefix: function keyPrefix() {
+      return this.web3.utils.sha3(this.host);
     }
   }), Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* mapGetters */])(['connected'])),
   created: function created() {
-    if (this.$storage.isExist(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey) === true) {
-      this.from = this.$storage.getItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey);
+    if (this.$storage.isExist(this.keyPrefix + ':config.blockFromStorageKey') === true) {
+      this.from = parseInt(this.$storage.getItem(this.keyPrefix + ':config.blockFromStorageKey'), 10);
     }
-    if (this.$storage.isExist(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey) === true) {
-      this.to = this.$storage.getItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey);
+    if (this.$storage.isExist(this.keyPrefix + ':config.blockToStorageKey') === true) {
+      this.to = parseInt(this.$storage.getItem(this.keyPrefix + ':config.blockToStorageKey'), 10);
     }
-    if (this.$storage.isExist(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey) === true) {
-      this.limit = this.$storage.getItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey);
+    if (this.$storage.isExist(this.keyPrefix + ':config.blockLimitStorageKey') === true) {
+      this.limit = parseInt(this.$storage.getItem(this.keyPrefix + ':config.blockLimitStorageKey'), 10);
     }
   },
 
   methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])(['notify', 'setLoading']), {
     isValidNumber: function isValidNumber(number) {
+      if (typeof number === 'number') {
+        return true;
+      }
       if (/^[\d]+$/.test(number)) {
         return true;
       }
@@ -295,20 +319,20 @@ var Component = normalizeComponent(
       batch.execute();
 
       // save from and in to storage
-      this.$storage.setItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey, from);
-      this.$storage.setItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey, to);
+      this.$storage.setItem(this.keyPrefix + ':config.blockFromStorageKey', from);
+      this.$storage.setItem(this.keyPrefix + ':config.blockToStorageKey', to);
     },
     updateFrom: function updateFrom(from) {
       this.from = from;
-      this.$storage.setItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey, from);
+      this.$storage.setItem(this.keyPrefix + ':config.blockFromStorageKey', from);
     },
     updateTo: function updateTo(to) {
       this.to = to;
-      this.$storage.setItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey, to);
+      this.$storage.setItem(this.keyPrefix + ':config.blockToStorageKey', to);
     },
     updateLimit: function updateLimit(limit) {
       this.limit = limit;
-      this.$storage.setItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey, limit);
+      this.$storage.setItem(this.keyPrefix + ':config.blockLimitStorageKey', limit);
     }
   }),
   watch: {
@@ -328,14 +352,14 @@ var Component = normalizeComponent(
       if (this.isValidNumber(val) === true && val > this.to && val - this.to <= this.limit - 1) {
         this.getBlocks(this.from, this.to);
       } else {
-        this.notify({ text: 'Please enter correct from or to number!', class: 'is-danger' });
+        this.notify({ text: 'Please enter correct from or to number!', class: 'is-warning' });
       }
     },
     to: function to(val) {
       if (this.isValidNumber(val) === true && val < this.from && this.from - val <= this.limit - 1) {
         this.getBlocks(this.from, this.to);
       } else {
-        this.notify({ text: 'Please enter correct from or to number!', class: 'is-danger' });
+        this.notify({ text: 'Please enter correct from or to number!', class: 'is-warning' });
       }
     },
     limit: function limit(val, oldVal) {
@@ -345,14 +369,14 @@ var Component = normalizeComponent(
           this.limit = oldVal;
           return;
         }
-        this.$storage.setItem(__WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey, val);
+        this.$storage.setItem(this.keyPrefix + ':config.blockLimitStorageKey', val);
         if (this.from - this.to > this.limit) {
           this.to = this.from - val;
           return;
         }
         this.getBlocks(this.from, this.to);
       } else {
-        this.notify({ text: 'Please enter correct limit number!', class: 'is-danger' });
+        this.notify({ text: 'Please enter correct limit number!', class: 'is-warning' });
       }
     }
   }
@@ -398,22 +422,7 @@ var Component = normalizeComponent(
   }
 });
 
-/***/ }),
-
-/***/ "xzVA":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("FZ+f")(true);
-// imports
-
-
-// module
-exports.push([module.i, ".loading .button[data-v-de723c04]{border:none}.loading .button[data-v-de723c04]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/peterlai/vuethexplore/src/views/Index.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Index.vue","sourcesContent":["\n.loading .button[data-v-de723c04] {\n  border: none;\n}\n.loading .button[data-v-de723c04]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
-
-// exports
-
-
 /***/ })
 
 });
-//# sourceMappingURL=1.32784610ee0c77617e4e.js.map
+//# sourceMappingURL=1.a0a17c41fc7a0ff4d3f6.js.map
