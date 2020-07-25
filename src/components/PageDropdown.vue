@@ -9,7 +9,7 @@
 <template>
 <div class="dropdown" v-bind:class="{'is-active': isShow}">
   <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" v-on:click="toggleDropdown">
+    <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu" v-on:click="toggleDropdown">
       <span>{{ buttonText }}</span>
       <span class="icon is-small">
         <i class="fa fa-angle-down" aria-hidden="true"></i>

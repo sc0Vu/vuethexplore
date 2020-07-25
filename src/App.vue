@@ -43,7 +43,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section>
     <transition appear>
       <router-view></router-view>
     </transition>

@@ -23,7 +23,7 @@
         <page-number-input placeholder="limit" v-bind:inputValue="limit" v-on:update="updateLimit"></page-number-input>
       </div>
     </div>
-    <div>
+    <div class="table-container">
       <table class="table is-bordered is-hoverable is-fullwidth">
         <thead>
           <tr>

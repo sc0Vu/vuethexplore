@@ -12,7 +12,7 @@
   <div v-if="!connected">Please choose the host to connect blockchain! </div>
   <div class="loading" v-if="connected && loading"><span class="button is-loading"></span><span class="button">Loading!</span></div>
   <div v-if="connected && !loading">
-    <div class="section">
+    <div>
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">

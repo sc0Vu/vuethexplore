@@ -2,7 +2,7 @@ import store from '@/store';
 import blockchain from '@/store/modules/blockchain';
 
 describe('State blockchain', () => {
-  const host = 'https://infuranet.infura.io/vuethexplore';
+  const host = 'https://infuranet.infura.io/v3/2175b5624f22491ea751adfaac5148a6';
   const blockNumber = 1;
 
   it('should set host and connected', () => {
