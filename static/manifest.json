@@ -3,6 +3,16 @@
     "name": "Vuethexplorer",
     "icons": [
         {
+            "src": "images/logo_120.png",
+            "type": "image/png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "images/logo_180.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
           "src": "images/logo_192.png",
           "type": "image/png",
           "sizes": "192x192"
