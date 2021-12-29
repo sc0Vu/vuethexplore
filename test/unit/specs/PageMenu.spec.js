@@ -11,7 +11,7 @@ describe('PageMenu.vue', () => {
   it('should have default props', () => {
     const props = PageMenu.props;
 
-    expect(props.brandName.default()).to.equal('Vuethexplore');
+    expect(props.brandName.default()).to.equal('Vuethexplorer');
     expect(props.items.default()).to.deep.equal([]);
   });
 

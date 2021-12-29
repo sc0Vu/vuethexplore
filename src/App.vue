@@ -16,7 +16,7 @@
   <section class="hero is-primary">
     <div class="hero-body">
       <div>
-        <h1 class="title">Vuethexplore - vue + ethereum blockchain explore.</h1>
+        <h1 class="title">Vuethexplorer - vue + ethereum blockchain explorer.</h1>
         <h2 class="subtitle">
           <template v-if="isBeta">
             <strong>Notice: the web3 is in beta version!</strong><br>
@@ -52,8 +52,8 @@
   <footer class="footer">
     <div class="container">
       <p>Made with <span class="bd-emoji">❤️</span> by <strong><a href="https://medium.com/@sc0vu" target="_blank">Peter Lai</a></strong></p>
-      <p>Css framework: <strong><a href="http://bulma.io/" target="_blank">bulma</a></strong></p>
-      <p>Js framework: <strong><a href="https://vuejs.org/" target="_blank">vue</a></strong></p>
+      <p>CSS framework: <strong><a href="http://bulma.io/" target="_blank">bulma</a></strong></p>
+      <p>JS framework: <strong><a href="https://vuejs.org/" target="_blank">vue</a></strong></p>
     </div>
   </footer>
   <page-notifications></page-notifications>
@@ -113,7 +113,7 @@ export default {
     }
   },
   mounted () {
-    this.notify({ text: 'You can use this explore on ethereum based blockchain, if you have any question, please open an issue on github!', class: 'is-info' });
+    this.notify({ text: 'You can use this explorer on ethereum based blockchain, if you have any question, please open an issue on github!', class: 'is-info' });
   },
   methods: {
     selectHost (host) {

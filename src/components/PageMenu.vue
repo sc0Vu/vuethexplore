@@ -27,7 +27,7 @@ export default {
     brandName: {
       type: String,
       default () {
-        return 'Vuethexplore';
+        return 'Vuethexplorer';
       },
     },
     items: {

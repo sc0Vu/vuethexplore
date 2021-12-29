@@ -1,7 +1,7 @@
 {
-  "name": "vuethexplore",
+  "name": "vuethexplorer",
   "version": "1.0.0",
-  "description": "Vue project for ethereum blockchain explore.",
+  "description": "Vue project for ethereum blockchain explorer.",
   "author": "sc0Vu <alk03073135@gmail.com>",
   "private": true,
   "scripts": {
