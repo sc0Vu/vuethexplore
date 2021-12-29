@@ -10,7 +10,7 @@ module.exports = {"name":"petersburg","comment":"Aka constantinopleFix, removes 
 /***/ "+YNr":
 /***/ (function(module, exports) {
 
-module.exports = {"_from":"web3@1.2.11","_id":"web3@1.2.11","_inBundle":false,"_integrity":"sha512-mjQ8HeU41G6hgOYm1pmeH0mRAeNKJGnJEUzDMoerkpw7QUQT4exVREgF1MYPvL/z6vAshOXei25LE/t/Bxl8yQ==","_location":"/web3","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"web3@1.2.11","name":"web3","escapedName":"web3","rawSpec":"1.2.11","saveSpec":null,"fetchSpec":"1.2.11"},"_requiredBy":["#USER","/"],"_resolved":"https://registry.npmjs.org/web3/-/web3-1.2.11.tgz","_shasum":"50f458b2e8b11aa37302071c170ed61cff332975","_spec":"web3@1.2.11","_where":"/Users/peterlai/Desktop/Projects/vuethexplore","author":{"name":"ethereum.org"},"authors":[{"name":"Fabian Vogelsteller","email":"fabian@ethereum.org","homepage":"http://frozeman.de"},{"name":"Marek Kotewicz","email":"marek@parity.io","url":"https://github.com/debris"},{"name":"Marian Oancea","url":"https://github.com/cubedro"},{"name":"Gav Wood","email":"g@parity.io","homepage":"http://gavwood.com"},{"name":"Jeffery Wilcke","email":"jeffrey.wilcke@ethereum.org","url":"https://github.com/obscuren"}],"bugs":{"url":"https://github.com/ethereum/web3.js/issues"},"bundleDependencies":false,"dependencies":{"web3-bzz":"1.2.11","web3-core":"1.2.11","web3-eth":"1.2.11","web3-eth-personal":"1.2.11","web3-net":"1.2.11","web3-shh":"1.2.11","web3-utils":"1.2.11"},"deprecated":false,"description":"Ethereum JavaScript API","devDependencies":{"@types/node":"^12.12.6","dtslint":"^3.4.1","typescript":"^3.9.5"},"engines":{"node":">=8.0.0"},"gitHead":"87e668275ac7d9b8af7c909137fc0626c3866929","homepage":"https://github.com/ethereum/web3.js#readme","keywords":["Ethereum","JavaScript","API"],"license":"LGPL-3.0","main":"src/index.js","name":"web3","repository":{"type":"git","url":"git+https://github.com/ethereum/web3.js.git"},"scripts":{"dtslint":"dtslint --localTs ../../node_modules/typescript/lib types","postinstall":"node angular-patch.js"},"types":"types/index.d.ts","version":"1.2.11"}
+module.exports = {"_args":[["web3@1.2.11","/Users/laiguancheng/Desktop/projects/opensource/vuethexplore"]],"_from":"web3@1.2.11","_id":"web3@1.2.11","_inBundle":false,"_integrity":"sha512-mjQ8HeU41G6hgOYm1pmeH0mRAeNKJGnJEUzDMoerkpw7QUQT4exVREgF1MYPvL/z6vAshOXei25LE/t/Bxl8yQ==","_location":"/web3","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"web3@1.2.11","name":"web3","escapedName":"web3","rawSpec":"1.2.11","saveSpec":null,"fetchSpec":"1.2.11"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/web3/-/web3-1.2.11.tgz","_spec":"1.2.11","_where":"/Users/laiguancheng/Desktop/projects/opensource/vuethexplore","author":{"name":"ethereum.org"},"authors":[{"name":"Fabian Vogelsteller","email":"fabian@ethereum.org","homepage":"http://frozeman.de"},{"name":"Marek Kotewicz","email":"marek@parity.io","url":"https://github.com/debris"},{"name":"Marian Oancea","url":"https://github.com/cubedro"},{"name":"Gav Wood","email":"g@parity.io","homepage":"http://gavwood.com"},{"name":"Jeffery Wilcke","email":"jeffrey.wilcke@ethereum.org","url":"https://github.com/obscuren"}],"bugs":{"url":"https://github.com/ethereum/web3.js/issues"},"dependencies":{"web3-bzz":"1.2.11","web3-core":"1.2.11","web3-eth":"1.2.11","web3-eth-personal":"1.2.11","web3-net":"1.2.11","web3-shh":"1.2.11","web3-utils":"1.2.11"},"description":"Ethereum JavaScript API","devDependencies":{"@types/node":"^12.12.6","dtslint":"^3.4.1","typescript":"^3.9.5"},"engines":{"node":">=8.0.0"},"gitHead":"87e668275ac7d9b8af7c909137fc0626c3866929","homepage":"https://github.com/ethereum/web3.js#readme","keywords":["Ethereum","JavaScript","API"],"license":"LGPL-3.0","main":"src/index.js","name":"web3","repository":{"type":"git","url":"git+https://github.com/ethereum/web3.js.git"},"scripts":{"dtslint":"dtslint --localTs ../../node_modules/typescript/lib types","postinstall":"node angular-patch.js"},"types":"types/index.d.ts","version":"1.2.11"}
 
 /***/ }),
 
@@ -27,9 +27,9 @@ module.exports = {"_from":"web3@1.2.11","_id":"web3@1.2.11","_inBundle":false,"_
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_PageMenu_vue__ = __webpack_require__("aPid");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6c0baa50_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_PageMenu_vue__ = __webpack_require__("qwKq");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_12ec84f0_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_PageMenu_vue__ = __webpack_require__("VtBt");
 function injectStyle (ssrContext) {
-  __webpack_require__("7uLH")
+  __webpack_require__("drZK")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -47,7 +47,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_PageMenu_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6c0baa50_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_PageMenu_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_12ec84f0_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_PageMenu_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -112,13 +112,6 @@ module.exports = {"aes-128-ecb":{"cipher":"AES","key":128,"iv":0,"mode":"ECB","t
 /***/ (function(module, exports) {
 
 module.exports = {"name":"homestead","comment":"Homestead hardfork with protocol and network changes","eip":{"url":"https://eips.ethereum.org/EIPS/eip-606","status":"Final"},"gasConfig":{},"gasPrices":{},"vm":{},"pow":{},"casper":{},"sharding":{}}
-
-/***/ }),
-
-/***/ "7uLH":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -201,7 +194,7 @@ module.exports = {"name":"rinkeby","chainId":4,"networkId":4,"comment":"PoA test
 /***/ "CcxV":
 /***/ (function(module, exports) {
 
-module.exports = {"_from":"elliptic@6.5.3","_id":"elliptic@6.5.3","_inBundle":false,"_integrity":"sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==","_location":"/@ethersproject/signing-key/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.5.3","name":"elliptic","escapedName":"elliptic","rawSpec":"6.5.3","saveSpec":null,"fetchSpec":"6.5.3"},"_requiredBy":["/@ethersproject/signing-key"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz","_shasum":"cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6","_spec":"elliptic@6.5.3","_where":"/Users/peterlai/Desktop/Projects/vuethexplore/node_modules/@ethersproject/signing-key","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"bundleDependencies":false,"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"deprecated":false,"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^3.0.8","grunt":"^1.0.4","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.2","jscs":"^3.0.7","jshint":"^2.10.3","mocha":"^6.2.2"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.3"}
+module.exports = {"_args":[["elliptic@6.5.3","/Users/laiguancheng/Desktop/projects/opensource/vuethexplore"]],"_from":"elliptic@6.5.3","_id":"elliptic@6.5.3","_inBundle":false,"_integrity":"sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==","_location":"/@ethersproject/signing-key/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.5.3","name":"elliptic","escapedName":"elliptic","rawSpec":"6.5.3","saveSpec":null,"fetchSpec":"6.5.3"},"_requiredBy":["/@ethersproject/signing-key"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz","_spec":"6.5.3","_where":"/Users/laiguancheng/Desktop/projects/opensource/vuethexplore","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^3.0.8","grunt":"^1.0.4","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.2","jscs":"^3.0.7","jshint":"^2.10.3","mocha":"^6.2.2"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.3"}
 
 /***/ }),
 
@@ -350,7 +343,7 @@ var mutations = {
 /***/ "KYqO":
 /***/ (function(module, exports) {
 
-module.exports = {"_args":[["elliptic@6.4.1","/Users/peterlai/Desktop/Projects/vuethexplore"]],"_from":"elliptic@6.4.1","_id":"elliptic@6.4.1","_inBundle":false,"_integrity":"sha512-BsXLz5sqX8OHcsh7CqBMztyXARmGQ3LWPtGjJi6DiJHq5C/qvi9P3OqgswKSDftbu8+IoI/QDTAm2fFnQ9SZSQ==","_location":"/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.4.1","name":"elliptic","escapedName":"elliptic","rawSpec":"6.4.1","saveSpec":null,"fetchSpec":"6.4.1"},"_requiredBy":["/browserify-sign","/create-ecdh","/eth-lib","/secp256k1","/web3-eth-accounts/eth-lib","/web3-utils/eth-lib"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.1.tgz","_spec":"6.4.1","_where":"/Users/peterlai/Desktop/Projects/vuethexplore","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^2.11.3","grunt":"^0.4.5","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^8.6.2","istanbul":"^0.4.2","jscs":"^2.9.0","jshint":"^2.6.0","mocha":"^2.1.0"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.4.1"}
+module.exports = {"_args":[["elliptic@6.4.1","/Users/laiguancheng/Desktop/projects/opensource/vuethexplore"]],"_from":"elliptic@6.4.1","_id":"elliptic@6.4.1","_inBundle":false,"_integrity":"sha512-BsXLz5sqX8OHcsh7CqBMztyXARmGQ3LWPtGjJi6DiJHq5C/qvi9P3OqgswKSDftbu8+IoI/QDTAm2fFnQ9SZSQ==","_location":"/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.4.1","name":"elliptic","escapedName":"elliptic","rawSpec":"6.4.1","saveSpec":null,"fetchSpec":"6.4.1"},"_requiredBy":["/browserify-sign","/create-ecdh","/eth-lib","/web3-eth-accounts/eth-lib","/web3-utils/eth-lib"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.1.tgz","_spec":"6.4.1","_where":"/Users/laiguancheng/Desktop/projects/opensource/vuethexplore","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^2.11.3","grunt":"^0.4.5","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^8.6.2","istanbul":"^0.4.2","jscs":"^2.9.0","jshint":"^2.6.0","mocha":"^2.1.0"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.4.1"}
 
 /***/ }),
 
@@ -360,9 +353,9 @@ module.exports = {"_args":[["elliptic@6.4.1","/Users/peterlai/Desktop/Projects/v
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__("xJD8");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d1cd772_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__("q0t4");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_573343d9_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__("gGZl");
 function injectStyle (ssrContext) {
-  __webpack_require__("fpYH")
+  __webpack_require__("tq/Q")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -380,7 +373,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d1cd772_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_573343d9_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -441,7 +434,7 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 
 /* eslint-disable no-new */
 new __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */]({
-  el: '#vuethexplore',
+  el: '#vuethexplorer',
   store: __WEBPACK_IMPORTED_MODULE_3__store__["a" /* default */],
   router: __WEBPACK_IMPORTED_MODULE_4__router__["a" /* default */],
   template: '<App/>',
@@ -515,6 +508,17 @@ module.exports = {"name":"chainstart","comment":"Start of the Ethereum main chai
 
 /***/ }),
 
+/***/ "VtBt":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{directives:[{name:"show",rawName:"v-show",value:(_vm.itemsValid),expression:"itemsValid"}],staticClass:"navbar",attrs:{"id":"page-navbar"}},[_c('div',{staticClass:"navbar-brand"},[_c('router-link',{staticClass:"navbar-item",attrs:{"to":"/"}},[_vm._v(_vm._s(_vm.brandName))]),_vm._v(" "),_c('div',{staticClass:"navbar-burger burger",on:{"click":function($event){$event.preventDefault();return _vm.toggleMenu($event)}}},[_c('span'),_vm._v(" "),_c('span'),_vm._v(" "),_c('span')])],1),_vm._v(" "),_c('div',{staticClass:"navbar-menu",class:{'is-active': _vm.isMenuActive}},[_c('div',{staticClass:"navbar-start"},_vm._l((_vm.items),function(item,index){return _c('router-link',{key:index,staticClass:"navbar-item",attrs:{"to":item.to}},[_vm._v(_vm._s(item.text))])}),1)])])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+
 /***/ "WuK1":
 /***/ (function(module, exports) {
 
@@ -525,7 +529,7 @@ module.exports = {"name":"byzantium","comment":"Hardfork with new precompiles, i
 /***/ "Y8tG":
 /***/ (function(module, exports) {
 
-module.exports = {"_from":"elliptic@^6.5.2","_id":"elliptic@6.5.3","_inBundle":false,"_integrity":"sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==","_location":"/ethereumjs-util/elliptic","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"elliptic@^6.5.2","name":"elliptic","escapedName":"elliptic","rawSpec":"^6.5.2","saveSpec":null,"fetchSpec":"^6.5.2"},"_requiredBy":["/ethereumjs-util"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz","_shasum":"cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6","_spec":"elliptic@^6.5.2","_where":"/Users/peterlai/Desktop/Projects/vuethexplore/node_modules/ethereumjs-util","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"bundleDependencies":false,"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"deprecated":false,"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^3.0.8","grunt":"^1.0.4","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.2","jscs":"^3.0.7","jshint":"^2.10.3","mocha":"^6.2.2"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.3"}
+module.exports = {"_args":[["elliptic@6.5.3","/Users/laiguancheng/Desktop/projects/opensource/vuethexplore"]],"_from":"elliptic@6.5.3","_id":"elliptic@6.5.3","_inBundle":false,"_integrity":"sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==","_location":"/ethereumjs-util/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.5.3","name":"elliptic","escapedName":"elliptic","rawSpec":"6.5.3","saveSpec":null,"fetchSpec":"6.5.3"},"_requiredBy":["/ethereumjs-util"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz","_spec":"6.5.3","_where":"/Users/laiguancheng/Desktop/projects/opensource/vuethexplore","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^3.0.8","grunt":"^1.0.4","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.2","jscs":"^3.0.7","jshint":"^2.10.3","mocha":"^6.2.2"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.3"}
 
 /***/ }),
 
@@ -641,7 +645,7 @@ module.exports = {"name":"constantinople","comment":"Postponed hardfork includin
     brandName: {
       type: String,
       default: function _default() {
-        return 'Vuethexplore';
+        return 'Vuethexplorer';
       }
     },
     items: {
@@ -700,6 +704,13 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
+/***/ "drZK":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "eHlc":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -741,7 +752,7 @@ var Component = normalizeComponent(
 /***/ "eajV":
 /***/ (function(module, exports) {
 
-module.exports = {"_from":"websocket@^1.0.31","_id":"websocket@1.0.31","_inBundle":false,"_integrity":"sha512-VAouplvGKPiKFDTeCCO65vYHsyay8DqoBSlzIO3fayrfOgU94lQN5a1uWVnFrMLceTJw/+fQXR5PGbUVRaHshQ==","_location":"/websocket","_phantomChildren":{"es6-iterator":"2.0.3","ext":"1.4.0","next-tick":"1.0.0","type":"1.2.0"},"_requested":{"type":"range","registry":true,"raw":"websocket@^1.0.31","name":"websocket","escapedName":"websocket","rawSpec":"^1.0.31","saveSpec":null,"fetchSpec":"^1.0.31"},"_requiredBy":["/web3-providers-ws"],"_resolved":"https://registry.npmjs.org/websocket/-/websocket-1.0.31.tgz","_shasum":"e5d0f16c3340ed87670e489ecae6144c79358730","_spec":"websocket@^1.0.31","_where":"/Users/peterlai/Desktop/Projects/vuethexplore/node_modules/web3-providers-ws","author":{"name":"Brian McKelvey","email":"theturtle32@gmail.com","url":"https://github.com/theturtle32"},"browser":"lib/browser.js","bugs":{"url":"https://github.com/theturtle32/WebSocket-Node/issues"},"bundleDependencies":false,"config":{"verbose":false},"contributors":[{"name":"Iñaki Baz Castillo","email":"ibc@aliax.net","url":"http://dev.sipdoc.net"}],"dependencies":{"debug":"^2.2.0","es5-ext":"^0.10.50","nan":"^2.14.0","typedarray-to-buffer":"^3.1.5","yaeti":"^0.0.6"},"deprecated":false,"description":"Websocket Client & Server Library implementing the WebSocket protocol as specified in RFC 6455.","devDependencies":{"buffer-equal":"^1.0.0","faucet":"^0.0.1","gulp":"^4.0.2","gulp-jshint":"^2.0.4","jshint":"^2.0.0","jshint-stylish":"^2.2.1","tape":"^4.9.1"},"directories":{"lib":"./lib"},"engines":{"node":">=0.10.0"},"homepage":"https://github.com/theturtle32/WebSocket-Node","keywords":["websocket","websockets","socket","networking","comet","push","RFC-6455","realtime","server","client"],"license":"Apache-2.0","main":"index","name":"websocket","repository":{"type":"git","url":"git+https://github.com/theturtle32/WebSocket-Node.git"},"scripts":{"gulp":"gulp","install":"(node-gyp rebuild 2> builderror.log) || (exit 0)","test":"faucet test/unit"},"version":"1.0.31"}
+module.exports = {"_args":[["websocket@1.0.31","/Users/laiguancheng/Desktop/projects/opensource/vuethexplore"]],"_from":"websocket@1.0.31","_id":"websocket@1.0.31","_inBundle":false,"_integrity":"sha512-VAouplvGKPiKFDTeCCO65vYHsyay8DqoBSlzIO3fayrfOgU94lQN5a1uWVnFrMLceTJw/+fQXR5PGbUVRaHshQ==","_location":"/websocket","_phantomChildren":{"es6-iterator":"2.0.3","ext":"1.4.0","next-tick":"1.0.0","type":"1.2.0"},"_requested":{"type":"version","registry":true,"raw":"websocket@1.0.31","name":"websocket","escapedName":"websocket","rawSpec":"1.0.31","saveSpec":null,"fetchSpec":"1.0.31"},"_requiredBy":["/web3-providers-ws"],"_resolved":"https://registry.npmjs.org/websocket/-/websocket-1.0.31.tgz","_spec":"1.0.31","_where":"/Users/laiguancheng/Desktop/projects/opensource/vuethexplore","author":{"name":"Brian McKelvey","email":"theturtle32@gmail.com","url":"https://github.com/theturtle32"},"browser":"lib/browser.js","bugs":{"url":"https://github.com/theturtle32/WebSocket-Node/issues"},"config":{"verbose":false},"contributors":[{"name":"Iñaki Baz Castillo","email":"ibc@aliax.net","url":"http://dev.sipdoc.net"}],"dependencies":{"debug":"^2.2.0","es5-ext":"^0.10.50","nan":"^2.14.0","typedarray-to-buffer":"^3.1.5","yaeti":"^0.0.6"},"description":"Websocket Client & Server Library implementing the WebSocket protocol as specified in RFC 6455.","devDependencies":{"buffer-equal":"^1.0.0","faucet":"^0.0.1","gulp":"^4.0.2","gulp-jshint":"^2.0.4","jshint":"^2.0.0","jshint-stylish":"^2.2.1","tape":"^4.9.1"},"directories":{"lib":"./lib"},"engines":{"node":">=0.10.0"},"homepage":"https://github.com/theturtle32/WebSocket-Node","keywords":["websocket","websockets","socket","networking","comet","push","RFC-6455","realtime","server","client"],"license":"Apache-2.0","main":"index","name":"websocket","repository":{"type":"git","url":"git+https://github.com/theturtle32/WebSocket-Node.git"},"scripts":{"gulp":"gulp","install":"(node-gyp rebuild 2> builderror.log) || (exit 0)","test":"faucet test/unit"},"version":"1.0.31"}
 
 /***/ }),
 
@@ -752,10 +763,14 @@ module.exports = {"sha224WithRSAEncryption":{"sign":"rsa","hash":"sha224","id":"
 
 /***/ }),
 
-/***/ "fpYH":
-/***/ (function(module, exports) {
+/***/ "gGZl":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[(_vm.menuItems.length > 0)?_c('div',{staticClass:"container"},[_c('page-menu',{attrs:{"items":_vm.menuItems}})],1):_vm._e(),_vm._v(" "),_c('section',{staticClass:"hero is-primary"},[_c('div',{staticClass:"hero-body"},[_c('div',[_c('h1',{staticClass:"title"},[_vm._v("Vuethexplorer - vue + ethereum blockchain explorer.")]),_vm._v(" "),_c('h2',{staticClass:"subtitle"},[(_vm.isBeta)?[_c('strong',[_vm._v("Notice: the web3 is in beta version!")]),_c('br')]:_vm._e(),_vm._v("\n          Web3 "),_c('strong',[_vm._v(_vm._s(_vm.version))]),_vm._v(" status: "),_c('strong',[_vm._v(_vm._s((_vm.connected === true) ? 'connected' : 'not connected'))]),_vm._v(".\n          "),(_vm.host)?[_c('br'),_vm._v("Host: "),_c('strong',[_vm._v(_vm._s(_vm.host))])]:_vm._e(),_vm._v(" "),(_vm.blockNumber)?[_c('br'),_vm._v("Latest block number: "),_c('strong',[_vm._v(_vm._s(_vm.blockNumber))])]:_vm._e()],2)])])]),_vm._v(" "),_c('section',{staticClass:"section"},[_c('div',{staticClass:"container"},[_c('div',{},[_c('button',{staticClass:"button is-small is-primary",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.previousPage($event)}}},[_vm._v("Previous")]),_vm._v(" "),_c('button',{staticClass:"button is-small is-info",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.nextPage($event)}}},[_vm._v("Next")]),_vm._v(" "),_c('page-dropdown',{attrs:{"buttonText":_vm.dropdownText,"items":_vm.dropdownItems},on:{"itemclick":_vm.changeHost,"inputChanged":_vm.changeHost}})],1)])]),_vm._v(" "),_c('section',[_c('transition',{attrs:{"appear":""}},[_c('router-view')],1)],1),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('page-notifications')],1)}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('footer',{staticClass:"footer"},[_c('div',{staticClass:"container"},[_c('p',[_vm._v("Made with "),_c('span',{staticClass:"bd-emoji"},[_vm._v("❤️")]),_vm._v(" by "),_c('strong',[_c('a',{attrs:{"href":"https://medium.com/@sc0vu","target":"_blank"}},[_vm._v("Peter Lai")])])]),_vm._v(" "),_c('p',[_vm._v("CSS framework: "),_c('strong',[_c('a',{attrs:{"href":"http://bulma.io/","target":"_blank"}},[_vm._v("bulma")])])]),_vm._v(" "),_c('p',[_vm._v("JS framework: "),_c('strong',[_c('a',{attrs:{"href":"https://vuejs.org/","target":"_blank"}},[_vm._v("vue")])])])])])}]
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
@@ -864,7 +879,7 @@ var mutations = {
 /***/ "j4/Y":
 /***/ (function(module, exports) {
 
-module.exports = {"_from":"elliptic@^6.5.2","_id":"elliptic@6.5.3","_inBundle":false,"_integrity":"sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==","_location":"/secp256k1/elliptic","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"elliptic@^6.5.2","name":"elliptic","escapedName":"elliptic","rawSpec":"^6.5.2","saveSpec":null,"fetchSpec":"^6.5.2"},"_requiredBy":["/secp256k1"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz","_shasum":"cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6","_spec":"elliptic@^6.5.2","_where":"/Users/peterlai/Desktop/Projects/vuethexplore/node_modules/secp256k1","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"bundleDependencies":false,"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"deprecated":false,"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^3.0.8","grunt":"^1.0.4","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.2","jscs":"^3.0.7","jshint":"^2.10.3","mocha":"^6.2.2"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.3"}
+module.exports = {"_args":[["elliptic@6.5.3","/Users/laiguancheng/Desktop/projects/opensource/vuethexplore"]],"_from":"elliptic@6.5.3","_id":"elliptic@6.5.3","_inBundle":false,"_integrity":"sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==","_location":"/secp256k1/elliptic","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"elliptic@6.5.3","name":"elliptic","escapedName":"elliptic","rawSpec":"6.5.3","saveSpec":null,"fetchSpec":"6.5.3"},"_requiredBy":["/secp256k1"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz","_spec":"6.5.3","_where":"/Users/laiguancheng/Desktop/projects/opensource/vuethexplore","author":{"name":"Fedor Indutny","email":"fedor@indutny.com"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^3.0.8","grunt":"^1.0.4","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^9.0.1","istanbul":"^0.4.2","jscs":"^3.0.7","jshint":"^2.10.3","mocha":"^6.2.2"},"files":["lib"],"homepage":"https://github.com/indutny/elliptic","keywords":["EC","Elliptic","curve","Cryptography"],"license":"MIT","main":"lib/elliptic.js","name":"elliptic","repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.5.3"}
 
 /***/ }),
 
@@ -1031,28 +1046,6 @@ module.exports = {"name":"ropsten","chainId":3,"networkId":3,"comment":"PoW test
 
 /***/ }),
 
-/***/ "q0t4":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[(_vm.menuItems.length > 0)?_c('div',{staticClass:"container"},[_c('page-menu',{attrs:{"items":_vm.menuItems}})],1):_vm._e(),_vm._v(" "),_c('section',{staticClass:"hero is-primary"},[_c('div',{staticClass:"hero-body"},[_c('div',[_c('h1',{staticClass:"title"},[_vm._v("Vuethexplore - vue + ethereum blockchain explore.")]),_vm._v(" "),_c('h2',{staticClass:"subtitle"},[(_vm.isBeta)?[_c('strong',[_vm._v("Notice: the web3 is in beta version!")]),_c('br')]:_vm._e(),_vm._v("\n          Web3 "),_c('strong',[_vm._v(_vm._s(_vm.version))]),_vm._v(" status: "),_c('strong',[_vm._v(_vm._s((_vm.connected === true) ? 'connected' : 'not connected'))]),_vm._v(".\n          "),(_vm.host)?[_c('br'),_vm._v("Host: "),_c('strong',[_vm._v(_vm._s(_vm.host))])]:_vm._e(),_vm._v(" "),(_vm.blockNumber)?[_c('br'),_vm._v("Latest block number: "),_c('strong',[_vm._v(_vm._s(_vm.blockNumber))])]:_vm._e()],2)])])]),_vm._v(" "),_c('section',{staticClass:"section"},[_c('div',{staticClass:"container"},[_c('div',{},[_c('button',{staticClass:"button is-small is-primary",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.previousPage($event)}}},[_vm._v("Previous")]),_vm._v(" "),_c('button',{staticClass:"button is-small is-info",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.nextPage($event)}}},[_vm._v("Next")]),_vm._v(" "),_c('page-dropdown',{attrs:{"buttonText":_vm.dropdownText,"items":_vm.dropdownItems},on:{"itemclick":_vm.changeHost,"inputChanged":_vm.changeHost}})],1)])]),_vm._v(" "),_c('section',[_c('transition',{attrs:{"appear":""}},[_c('router-view')],1)],1),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('page-notifications')],1)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('footer',{staticClass:"footer"},[_c('div',{staticClass:"container"},[_c('p',[_vm._v("Made with "),_c('span',{staticClass:"bd-emoji"},[_vm._v("❤️")]),_vm._v(" by "),_c('strong',[_c('a',{attrs:{"href":"https://medium.com/@sc0vu","target":"_blank"}},[_vm._v("Peter Lai")])])]),_vm._v(" "),_c('p',[_vm._v("Css framework: "),_c('strong',[_c('a',{attrs:{"href":"http://bulma.io/","target":"_blank"}},[_vm._v("bulma")])])]),_vm._v(" "),_c('p',[_vm._v("Js framework: "),_c('strong',[_c('a',{attrs:{"href":"https://vuejs.org/","target":"_blank"}},[_vm._v("vue")])])])])])}]
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
-/***/ "qwKq":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{directives:[{name:"show",rawName:"v-show",value:(_vm.itemsValid),expression:"itemsValid"}],staticClass:"navbar",attrs:{"id":"page-navbar"}},[_c('div',{staticClass:"navbar-brand"},[_c('router-link',{staticClass:"navbar-item",attrs:{"to":"/"}},[_vm._v(_vm._s(_vm.brandName))]),_vm._v(" "),_c('div',{staticClass:"navbar-burger burger",on:{"click":function($event){$event.preventDefault();return _vm.toggleMenu($event)}}},[_c('span'),_vm._v(" "),_c('span'),_vm._v(" "),_c('span')])],1),_vm._v(" "),_c('div',{staticClass:"navbar-menu",class:{'is-active': _vm.isMenuActive}},[_c('div',{staticClass:"navbar-start"},_vm._l((_vm.items),function(item,index){return _c('router-link',{key:index,staticClass:"navbar-item",attrs:{"to":item.to}},[_vm._v(_vm._s(item.text))])}),1)])])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
 /***/ "tgVK":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1088,6 +1081,13 @@ var Component = normalizeComponent(
 
 /* harmony default export */ __webpack_exports__["a"] = (Component.exports);
 
+
+/***/ }),
+
+/***/ "tq/Q":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -1225,7 +1225,7 @@ module.exports = {"name":"kovan","chainId":42,"networkId":42,"comment":"Parity P
     }
   },
   mounted: function mounted() {
-    this.notify({ text: 'You can use this explore on ethereum based blockchain, if you have any question, please open an issue on github!', class: 'is-info' });
+    this.notify({ text: 'You can use this explorer on ethereum based blockchain, if you have any question, please open an issue on github!', class: 'is-info' });
   },
 
   methods: __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default()({
@@ -1323,4 +1323,4 @@ module.exports = {"name":"tangerineWhistle","comment":"Hardfork with gas cost ch
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.6ac0c4f4d6e315a287f2.js.map
+//# sourceMappingURL=app.5c1a3506861d5d91a50f.js.map

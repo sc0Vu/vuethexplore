@@ -1,31 +1,17 @@
 webpackJsonp([3],{
 
-/***/ "3JcS":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("Of77");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__("rjj0")("14052d3b", content, true, {});
-
-/***/ }),
-
-/***/ "LfET":
+/***/ "/nHg":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain! ")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',[_c('div',{staticClass:"card"},[_c('header',{staticClass:"card-header"},[_c('p',{staticClass:"card-header-title"},[_vm._v("\n            Block #"+_vm._s(_vm.block.number)+"\n          ")]),_vm._v(" "),_c('div',{staticClass:"tabs"},[_c('ul',[_c('li',{class:{ 'is-active': _vm.isSelected('information') }},[_c('a',{on:{"click":function($event){return _vm.select('information')}}},[_vm._v("Information")])]),_vm._v(" "),_c('li',{directives:[{name:"show",rawName:"v-show",value:(_vm.hasTransaction),expression:"hasTransaction"}],class:{ 'is-active': _vm.isSelected('transactions') }},[_c('a',{on:{"click":function($event){return _vm.select('transactions')}}},[_vm._v("Transactions")])])])])]),_vm._v(" "),_c('div',{staticClass:"card-content"},[_c('div',{staticClass:"content",staticStyle:{"word-wrap":"break-word"}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isSelected('information')),expression:"isSelected('information')"}]},[_c('p',{directives:[{name:"show",rawName:"v-show",value:(_vm.hasTransaction),expression:"hasTransaction"}]},[_vm._v("Transaction: "),_c('router-link',{attrs:{"to":{ name: 'Transaction', params: { transactionHash: _vm.block.transactions[0] } }}},[_vm._v(_vm._s(_vm.block.transactions[0]))]),_vm._v(", and other "+_vm._s(_vm.block.transactions.length - 1)+" transactions")],1),_vm._v(" "),_c('p',[_vm._v("Difficulty "+_vm._s(_vm.block.difficulty))]),_vm._v(" "),_c('p',[_vm._v("Total Difficulty: "+_vm._s(_vm.block.totalDifficulty))]),_vm._v(" "),_c('p',[_vm._v("Gas Limit: "+_vm._s(_vm.block.gasLimit))]),_vm._v(" "),_c('p',[_vm._v("Gas Used: "+_vm._s(_vm.block.gasUsed))]),_vm._v(" "),_c('p',[_vm._v("Hash: "+_vm._s(_vm.block.hash))]),_vm._v(" "),_c('p',[_vm._v("Parent Hash: "),_c('router-link',{attrs:{"to":{ name: 'Block', params: { blockNumber: _vm.block.parentHash } }}},[_vm._v(_vm._s(_vm.block.parentHash))])],1),_vm._v(" "),_c('p',[_vm._v("Logs Bloom: "+_vm._s(_vm.block.logsBloom))]),_vm._v(" "),_c('p',[_vm._v("SHA3 Uncles: "+_vm._s(_vm.block.sha3Uncles))]),_vm._v(" "),_c('p',[_vm._v("Miner: "),_c('router-link',{attrs:{"to":{ name: 'Address', params: { address: _vm.block.miner } }}},[_vm._v(_vm._s(_vm.block.miner))])],1),_vm._v(" "),_c('p',[_vm._v("Mix Hash: "+_vm._s(_vm.block.mixHash))]),_vm._v(" "),_c('p',[_vm._v("Nonce: "+_vm._s(_vm.block.nonce))]),_vm._v(" "),_c('p',[_vm._v("Size: "+_vm._s(_vm.block.size))]),_vm._v(" "),_c('p',[_vm._v("Extra Data: "+_vm._s(_vm.toUtf8(_vm.block.extraData))+" (Hex: "+_vm._s(_vm.block.extraData)+")")]),_vm._v(" "),_c('time',[_vm._v("Timestamp: "+_vm._s(_vm.block.timestamp)+" ("+_vm._s(new Date(_vm.block.timestamp * 1000).toString())+")")])]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isSelected('transactions')),expression:"isSelected('transactions')"}]},_vm._l((_vm.block.transactions),function(transaction){return _c('p',[_c('router-link',{attrs:{"to":{ name: 'Transaction', params: { transactionHash: transaction } }}},[_vm._v(_vm._s(transaction))])],1)}),0)])])])])]):_vm._e()])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain! ")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',[_c('div',{staticClass:"card"},[_c('header',{staticClass:"card-header"},[_c('p',{staticClass:"card-header-title"},[_vm._v("\n            Block #"+_vm._s(_vm.block.number)+"\n          ")]),_vm._v(" "),_c('div',{staticClass:"tabs"},[_c('ul',[_c('li',{class:{ 'is-active': _vm.isSelected('information') }},[_c('a',{on:{"click":function($event){return _vm.select('information')}}},[_vm._v("Information")])]),_vm._v(" "),_c('li',{directives:[{name:"show",rawName:"v-show",value:(_vm.hasTransaction),expression:"hasTransaction"}],class:{ 'is-active': _vm.isSelected('transactions') }},[_c('a',{on:{"click":function($event){return _vm.select('transactions')}}},[_vm._v("Transactions")])])])])]),_vm._v(" "),_c('div',{staticClass:"card-content"},[_c('div',{staticClass:"content",staticStyle:{"word-wrap":"break-word"}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isSelected('information')),expression:"isSelected('information')"}]},[_c('p',{directives:[{name:"show",rawName:"v-show",value:(_vm.hasTransaction),expression:"hasTransaction"}]},[_vm._v("Transaction: "),_c('router-link',{attrs:{"to":{ name: 'Transaction', params: { transactionHash: _vm.block.transactions[0] } }}},[_vm._v(_vm._s(_vm.block.transactions[0]))]),_vm._v(", and other "+_vm._s(_vm.block.transactions.length - 1)+" transactions")],1),_vm._v(" "),_c('p',[_vm._v("Difficulty "+_vm._s(_vm.block.difficulty))]),_vm._v(" "),_c('p',[_vm._v("Total Difficulty: "+_vm._s(_vm.block.totalDifficulty))]),_vm._v(" "),_c('p',[_vm._v("Gas Limit: "+_vm._s(_vm.block.gasLimit))]),_vm._v(" "),_c('p',[_vm._v("Gas Used: "+_vm._s(_vm.block.gasUsed))]),_vm._v(" "),_c('p',[_vm._v("Hash: "+_vm._s(_vm.block.hash))]),_vm._v(" "),_c('p',[_vm._v("Parent Hash: "),_c('router-link',{attrs:{"to":{ name: 'Block', params: { blockNumber: _vm.block.parentHash } }}},[_vm._v(_vm._s(_vm.block.parentHash))])],1),_vm._v(" "),_c('p',[_vm._v("Logs Bloom: "+_vm._s(_vm.block.logsBloom))]),_vm._v(" "),_c('p',[_vm._v("SHA3 Uncles: "+_vm._s(_vm.block.sha3Uncles))]),_vm._v(" "),_c('p',[_vm._v("Miner: "),_c('router-link',{attrs:{"to":{ name: 'Address', params: { address: _vm.block.miner } }}},[_vm._v(_vm._s(_vm.block.miner))])],1),_vm._v(" "),_c('p',[_vm._v("Mix Hash: "+_vm._s(_vm.block.mixHash))]),_vm._v(" "),_c('p',[_vm._v("Nonce: "+_vm._s(_vm.block.nonce))]),_vm._v(" "),_c('p',[_vm._v("Size: "+_vm._s(_vm.block.size))]),_vm._v(" "),_c('p',[_vm._v("Extra Data: "+_vm._s(_vm.toUtf8(_vm.block.extraData))+" (Hex: "+_vm._s(_vm.block.extraData)+")")]),_vm._v(" "),_c('time',[_vm._v("Timestamp: "+_vm._s(_vm.block.timestamp)+" ("+_vm._s(new Date(_vm.block.timestamp * 1000).toString())+")")])]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isSelected('transactions')),expression:"isSelected('transactions')"}]},_vm._l((_vm.block.transactions),function(transaction,i){return _c('p',{key:i},[_c('router-link',{attrs:{"to":{ name: 'Transaction', params: { transactionHash: transaction } }}},[_vm._v(_vm._s(transaction))])],1)}),0)])])])])]):_vm._e()])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
-/***/ "Of77":
+/***/ "GXmN":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("FZ+f")(true);
@@ -33,7 +19,7 @@ exports = module.exports = __webpack_require__("FZ+f")(true);
 
 
 // module
-exports.push([module.i, ".loading .button[data-v-773d24f6]{border:none}.loading .button[data-v-773d24f6]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/peterlai/Desktop/Projects/vuethexplore/src/views/Block.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Block.vue","sourcesContent":["\n.loading .button[data-v-773d24f6] {\n  border: none;\n}\n.loading .button[data-v-773d24f6]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, ".loading .button[data-v-3e653828]{border:none}.loading .button[data-v-3e653828]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/laiguancheng/Desktop/projects/opensource/vuethexplore/src/views/Block.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Block.vue","sourcesContent":["\n.loading .button[data-v-3e653828] {\n  border: none;\n}\n.loading .button[data-v-3e653828]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -229,9 +215,9 @@ exports.push([module.i, ".loading .button[data-v-773d24f6]{border:none}.loading 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Block_vue__ = __webpack_require__("T3b1");
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_773d24f6_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Block_vue__ = __webpack_require__("LfET");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3e653828_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Block_vue__ = __webpack_require__("/nHg");
 function injectStyle (ssrContext) {
-  __webpack_require__("3JcS")
+  __webpack_require__("w521")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -244,12 +230,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-773d24f6"
+var __vue_scopeId__ = "data-v-3e653828"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Block_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_773d24f6_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Block_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3e653828_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Block_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -259,7 +245,21 @@ var Component = normalizeComponent(
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
 
+/***/ }),
+
+/***/ "w521":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("GXmN");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__("rjj0")("b6516b3c", content, true, {});
+
 /***/ })
 
 });
-//# sourceMappingURL=3.064ea337a378e6d66d46.js.map
+//# sourceMappingURL=3.1d567f44310227050401.js.map
