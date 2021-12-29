@@ -27,7 +27,7 @@ Vue.use(storage);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#vuethexplore',
+  el: '#vuethexplorer',
   store,
   router,
   template: '<App/>',

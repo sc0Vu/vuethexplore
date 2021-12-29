@@ -2,7 +2,7 @@ import store from '@/store';
 import page from '@/store/modules/page';
 
 describe('State page', () => {
-  const notification = { text: 'Hello vuethexplore!', class: 'is-primary' };
+  const notification = { text: 'Hello vuethexplorer!', class: 'is-primary' };
 
   it('should notify notification', () => {
     page.mutations.notify(store.state.page, notification);

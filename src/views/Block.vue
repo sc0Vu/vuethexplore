@@ -49,7 +49,7 @@
               <time>Timestamp: {{ block.timestamp }} ({{ new Date(block.timestamp * 1000).toString() }})</time>
             </div>
             <div v-show="isSelected('transactions')">
-              <p v-for="transaction in block.transactions">
+              <p v-for="(transaction, i) in block.transactions" v-bind:key="i">
                 <router-link v-bind:to="{ name: 'Transaction', params: { transactionHash: transaction } }">{{ transaction }}</router-link>
               </p>
             </div>

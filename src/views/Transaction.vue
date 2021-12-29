@@ -26,14 +26,17 @@
             <p>From: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.from } }">{{ transaction.from }}</router-link></p>
             <p>To: <router-link v-bind:to="{ name: 'Address', params: { address: transaction.to } }">{{ transaction.to }}</router-link></p>
             <p>Status: {{ transaction.status }}</p>
-            <p>Contract Address: {{ (transaction.contractAddress) ? transaction.contractAddress : 'Not contract transaction.' }}</p>
+            <p>Contract Address: {{ (transaction.contractAddress) ? transaction.contractAddress : 'Not contract deployment transaction.' }}</p>
+            <p>Cumulative Gas Used: {{ transaction.cumulativeGasUsed }}</p>
+            <!-- <p>Gas Used: {{ transaction.cumulativeGasUsed }}</p> -->
+            <p v-if="transaction.type > 1">Effective Gas Price: {{ transaction.effectiveGasPrice }}</p>
+            <p>Transaction type: {{ transactionType }}</p>
+            <p v-if="transaction.type > 0">Access list: {{ transaction.accessList ? transaction.accessList.join(',') : 'None' }}</p>
             <p>Logs: 
               <template v-if="logs !== false">
-                <ul>
-                  <li v-for="(log, index) in logs" v-on:click="selectLog(log)"><code>log - {{ index }}</code></li>
-                </ul>
+                <button class="button is-small" v-for="(log, index) in logs" v-on:click="selectLog(log)" v-bind:key="index" style="margin-right: 5px">log - {{ index }}</button>
                 <template v-if="selectedLog.address">
-                  <p style="background-color: whitesmoke;padding: 1.25em 1.5em;word-wrap: normal;overflow-x:scroll;">
+                  <p style="margin-top: 15px;background-color: whitesmoke;padding: 1.25em 1.5em;word-wrap: normal;overflow-x:scroll;">
                     Selected log: {{ selectedLog.logIndex }}<br>
                     Address: {{ selectedLog.address }}<br>
                     Block Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: selectedLog.blockHash } }">{{ selectedLog.blockHash }}</router-link><br>
@@ -49,8 +52,6 @@
               <span v-else>No logs.</span>
             </p>
             <p>Logs Bloom: {{ transaction.logsBloom }}</p>
-            <p>Cumulative Gas Used: {{ transaction.cumulativeGasUsed }}</p>
-            <p>Gas Used: {{ transaction.cumulativeGasUsed }}</p>
           </div>
         </div>
       </div>
@@ -90,6 +91,14 @@ export default {
       }
       return false;
     },
+    transactionType () {
+      if (this.transaction.type === 1) {
+        return 'EIP2930';
+      } else if (this.transaction.type === 2) {
+        return 'EIP1559';
+      }
+      return 'Legacy';
+    },
   },
   created () {
     this.getTransaction(this.$route.params.transactionHash);
@@ -124,7 +133,12 @@ export default {
       }
 
       this.web3.eth.getTransactionReceipt(transactionHash).then((transaction) => {
+        let transactionType = 0;
+        if (transaction.type !== undefined) {
+          transactionType = parseInt(transaction.type, 16);
+        }
         this.transaction = transaction;
+        this.transaction.type = transactionType;
       }).catch((err) => {
         this.notify({ text: `Failed to get transaction ${transactionHash}! Error: ${err.message}`, class: 'is-danger' });
       }).then(() => {
@@ -135,9 +149,13 @@ export default {
     },
     selectLog (log) {
       if (log.address) {
-        this.selectedLog = log;
+        if (log.logIndex === this.selectedLog.logIndex) {
+          this.selectedLog = {};
+        } else {
+          this.selectedLog = log;
+        }
       } else {
-        this.notify({ text: 'Please select correst log.', class: 'is-danger' });
+        this.notify({ text: 'Please select correct log.', class: 'is-danger' });
       }
     },
   },
