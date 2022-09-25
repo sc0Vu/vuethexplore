@@ -11,6 +11,20 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
+/***/ "MCq4":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("zdq9");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__("rjj0")("01d08fee", content, true, {});
+
+/***/ }),
+
 /***/ "Ok2f":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -46,43 +60,14 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ "QS8o":
+/***/ "hrhx":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain!")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',{staticClass:"columns"},[_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"from","inputValue":_vm.from},on:{"update":_vm.updateFrom}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"to","inputValue":_vm.to},on:{"update":_vm.updateTo}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"limit","inputValue":_vm.limit},on:{"update":_vm.updateLimit}})],1)]),_vm._v(" "),_c('div',{staticClass:"table-container"},[_c('table',{staticClass:"table is-bordered is-hoverable is-fullwidth"},[_vm._m(0),_vm._v(" "),_c('tbody',_vm._l((_vm.blocks),function(block){return _c('tr',[_c('td',[_c('router-link',{attrs:{"to":{ name: 'Block', params: { blockNumber: block.number } }}},[_vm._v(_vm._s(block.number))])],1),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.transactions.length))]),_vm._v(" txns")]),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.uncles.length))]),_vm._v(" uncles")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.difficulty))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasLimit))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasUsed))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.miner))])])}),0)])])]):_vm._e()])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',[_vm._v("Block Number")]),_vm._v(" "),_c('th',[_vm._v("Transactions")]),_vm._v(" "),_c('th',[_vm._v("Uncles")]),_vm._v(" "),_c('th',[_vm._v("Difficulty")]),_vm._v(" "),_c('th',[_vm._v("Gas Limit")]),_vm._v(" "),_c('th',[_vm._v("Gas Used")]),_vm._v(" "),_c('th',[_vm._v("Miner")])])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[(!_vm.connected)?_c('div',[_vm._v("Please choose the host to connect blockchain!")]):_vm._e(),_vm._v(" "),(_vm.connected && _vm.loading)?_c('div',{staticClass:"loading"},[_c('span',{staticClass:"button is-loading"}),_c('span',{staticClass:"button"},[_vm._v("Loading!")])]):_vm._e(),_vm._v(" "),(_vm.connected && !_vm.loading)?_c('div',[_c('div',{staticClass:"columns"},[_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"from","inputValue":_vm.from},on:{"update":_vm.updateFrom}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"to","inputValue":_vm.to},on:{"update":_vm.updateTo}})],1),_vm._v(" "),_c('div',{staticClass:"column control"},[_c('page-number-input',{attrs:{"placeholder":"limit","inputValue":_vm.limit},on:{"update":_vm.updateLimit}})],1)]),_vm._v(" "),_c('div',{staticClass:"table-container"},[_c('table',{staticClass:"table is-bordered is-hoverable is-fullwidth"},[_vm._m(0),_vm._v(" "),_c('tbody',_vm._l((_vm.blocks),function(block){return _c('tr',[_c('td',[_c('router-link',{attrs:{"to":{ name: 'Block', params: { blockNumber: block.number } }}},[_vm._v(_vm._s(block.number))]),_vm._v("\n                "),(block.baseFeePerGas && block.baseFeePerGas !== '')?_c('span',{staticClass:"tag is-primary"},[_vm._v("EIP1559")]):_vm._e(),_vm._v("\n                "),(block.difficulty === '0')?_c('span',{staticClass:"tag is-success"},[_vm._v("Merge")]):_vm._e()],1),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.transactions.length))]),_vm._v(" txns")]),_vm._v(" "),_c('td',[_c('strong',[_vm._v(_vm._s(block.uncles.length))]),_vm._v(" uncles")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasLimit))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(block.gasUsed))]),_vm._v(" "),_c('td',[_c('router-link',{attrs:{"to":{ name: 'Address', params: { address: block.miner } }}},[_vm._v(_vm._s(block.miner))])],1)])}),0)])])]):_vm._e()])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',[_vm._v("Block Number")]),_vm._v(" "),_c('th',[_vm._v("Transactions")]),_vm._v(" "),_c('th',[_vm._v("Uncles")]),_vm._v(" "),_c('th',[_vm._v("Gas Limit")]),_vm._v(" "),_c('th',[_vm._v("Gas Used")]),_vm._v(" "),_c('th',[_vm._v("Miner")])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
-/***/ "Qy5i":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("FZ+f")(true);
-// imports
-
-
-// module
-exports.push([module.i, ".loading .button[data-v-08f037b8]{border:none}.loading .button[data-v-08f037b8]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/laiguancheng/Desktop/projects/opensource/vuethexplore/src/views/Index.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Index.vue","sourcesContent":["\n.loading .button[data-v-08f037b8] {\n  border: none;\n}\n.loading .button[data-v-08f037b8]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "VtZl":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("Qy5i");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__("rjj0")("55b3cb48", content, true, {});
 
 /***/ }),
 
@@ -93,9 +78,9 @@ var update = __webpack_require__("rjj0")("55b3cb48", content, true, {});
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__ = __webpack_require__("tk/L");
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_08f037b8_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("QS8o");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b44da6b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("hrhx");
 function injectStyle (ssrContext) {
-  __webpack_require__("VtZl")
+  __webpack_require__("MCq4")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -108,12 +93,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-08f037b8"
+var __vue_scopeId__ = "data-v-1b44da6b"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_08f037b8_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b44da6b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -136,6 +121,8 @@ var Component = normalizeComponent(
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__config__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_PageNumberInput__ = __webpack_require__("Ok2f");
 
+//
+//
 //
 //
 //
@@ -226,7 +213,7 @@ var Component = normalizeComponent(
       return state.page.loading;
     },
     keyPrefix: function keyPrefix() {
-      return this.web3.utils.sha3(this.host);
+      return this.web3.utils ? this.web3.utils.sha3(this.host) : '';
     }
   }), Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* mapGetters */])(['connected'])),
   created: function created() {
@@ -422,7 +409,22 @@ var Component = normalizeComponent(
   }
 });
 
+/***/ }),
+
+/***/ "zdq9":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("FZ+f")(true);
+// imports
+
+
+// module
+exports.push([module.i, ".loading .button[data-v-1b44da6b]{border:none}.loading .button[data-v-1b44da6b]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/chenqiguan/Desktop/opensource/vuethexplore/src/views/Index.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Index.vue","sourcesContent":["\n.loading .button[data-v-1b44da6b] {\n  border: none;\n}\n.loading .button[data-v-1b44da6b]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
+
+// exports
+
+
 /***/ })
 
 });
-//# sourceMappingURL=1.e67290856f2c1c3c2866.js.map
+//# sourceMappingURL=1.744eb7c89772451941be.js.map
