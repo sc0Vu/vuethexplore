@@ -16,7 +16,9 @@
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">
-            Block #{{ block.number }}
+            Block #{{ block.number }} &nbsp;
+            <span v-if="isEIP1559" class="tag is-primary">EIP1559</span> &nbsp;
+            <span v-if="isAfterMerge" class="tag is-success">Merge</span>
           </p>
           <div class="tabs">
             <ul>
@@ -33,17 +35,17 @@
           <div class="content" style="word-wrap: break-word;">
             <div v-show="isSelected('information')">
               <p v-show="hasTransaction">Transaction: <router-link v-bind:to="{ name: 'Transaction', params: { transactionHash: block.transactions[0] } }">{{ block.transactions[0] }}</router-link>, and other {{block.transactions.length - 1 }} transactions</p>
-              <p>Difficulty {{ block.difficulty }}</p>
               <p>Total Difficulty: {{ block.totalDifficulty }}</p>
               <p>Gas Limit: {{ block.gasLimit }}</p>
               <p>Gas Used: {{ block.gasUsed }}</p>
+              <p v-if="block.baseFeePerGas">Base Fee Per Gas: {{ block.baseFeePerGas }} ({{ this.web3.utils.hexToNumberString(block.baseFeePerGas) }})</p>
               <p>Hash: {{ block.hash }}</p>
               <p>Parent Hash: <router-link v-bind:to="{ name: 'Block', params: { blockNumber: block.parentHash } }">{{ block.parentHash }}</router-link></p>
               <p>Logs Bloom: {{ block.logsBloom }}</p>
               <p>SHA3 Uncles: {{ block.sha3Uncles }}</p>
               <p>Miner: <router-link v-bind:to="{ name: 'Address', params: { address: block.miner } }">{{ block.miner }}</router-link></p>
               <p>Mix Hash: {{ block.mixHash }}</p>
-              <p>Nonce: {{ block.nonce }}</p>
+              <p v-if="!isEmptyNonce">Nonce: {{ block.nonce }}</p>
               <p>Size: {{ block.size }}</p>
               <p>Extra Data: {{ toUtf8(block.extraData) }} (Hex: {{ block.extraData }})</p>
               <time>Timestamp: {{ block.timestamp }} ({{ new Date(block.timestamp * 1000).toString() }})</time>
@@ -86,6 +88,15 @@ export default {
     ]),
     hasTransaction () {
       return (this.block.transactions !== undefined) ? (this.block.transactions.length > 0) : false;
+    },
+    isAfterMerge () {
+      return this.block.difficulty === '0';
+    },
+    isEIP1559 () {
+      return this.block.baseFeePerGas && this.block.baseFeePerGas !== '';
+    },
+    isEmptyNonce () {
+      return this.block.nonce === '0x0000000000000000';
     },
   },
   created () {
