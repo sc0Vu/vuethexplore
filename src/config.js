@@ -6,25 +6,15 @@ config.hosts = {
     rpcUri: 'https://mainnet.infura.io/v3/2175b5624f22491ea751adfaac5148a6',
     chainId: 1,
   },
-  ropsten: {
-    test: true,
-    rpcUri: 'https://ropsten.infura.io/v3/2175b5624f22491ea751adfaac5148a6',
-    chainId: 3,
+  goerli: {
+    test: false,
+    rpcUri: 'https://goerli.infura.io/v3/2175b5624f22491ea751adfaac5148a6',
+    chainId: 5,
   },
-  kovan: {
+  sepolia: {
     test: true,
-    rpcUri: 'https://kovan.infura.io/v3/2175b5624f22491ea751adfaac5148a6',
-    chainId: 42,
-  },
-  rinkeby: {
-    test: true,
-    rpcUri: 'https://rinkeby.infura.io/v3/2175b5624f22491ea751adfaac5148a6',
-    chainId: 4,
-  },
-  infura: {
-    test: true,
-    rpcUri: 'https://infuranet.infura.io/v3/2175b5624f22491ea751adfaac5148a6',
-    chainId: 999,
+    rpcUri: 'https://sepolia.infura.io/v3/2175b5624f22491ea751adfaac5148a6',
+    chainId: 11155111,
   },
 };
 

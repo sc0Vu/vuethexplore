@@ -30,7 +30,6 @@
             <th>Block Number</th>
             <th>Transactions</th>
             <th>Uncles</th>
-            <th>Difficulty</th>
             <th>Gas Limit</th>
             <th>Gas Used</th>
             <th>Miner</th>
@@ -40,13 +39,16 @@
           <tr v-for="block in blocks">
             <td>
               <router-link v-bind:to="{ name: 'Block', params: { blockNumber: block.number } }">{{ block.number }}</router-link>
+              &nbsp; <span v-if="block.baseFeePerGas && block.baseFeePerGas !== ''" class="tag is-primary">EIP1559</span>
+              &nbsp; <span v-if="block.difficulty === '0'" class="tag is-success">Merge</span>
             </td>
             <td><strong>{{ block.transactions.length }}</strong> txns</td>
             <td><strong>{{ block.uncles.length }}</strong> uncles</td>
-            <td>{{ block.difficulty }}</td>
             <td>{{ block.gasLimit }}</td>
             <td>{{ block.gasUsed }}</td>
-            <td>{{ block.miner }}</td>
+            <td>
+              <router-link v-bind:to="{ name: 'Address', params: { address: block.miner } }">{{ block.miner }}</router-link>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -88,7 +90,7 @@ export default {
         return state.page.loading;
       },
       keyPrefix () {
-        return this.web3.utils.sha3(this.host);
+        return this.web3.utils ? this.web3.utils.sha3(this.host) : '';
       },
     }),
     ...mapGetters([
