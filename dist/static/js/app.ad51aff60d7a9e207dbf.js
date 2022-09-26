@@ -87,6 +87,17 @@ var Component = normalizeComponent(
 
 /***/ }),
 
+/***/ "44Le":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[(_vm.menuItems.length > 0)?_c('div',{staticClass:"container"},[_c('page-menu',{attrs:{"items":_vm.menuItems}})],1):_vm._e(),_vm._v(" "),_c('section',{staticClass:"hero is-primary"},[_c('div',{staticClass:"hero-body"},[_c('div',[_c('h1',{staticClass:"title"},[_vm._v("Vuethexplorer - vue + ethereum blockchain explorer.")]),_vm._v(" "),_c('h2',{staticClass:"subtitle"},[(_vm.isBeta)?[_c('strong',[_vm._v("Notice: the web3 is in beta version!")]),_c('br')]:_vm._e(),_vm._v("\n          Web3 "),_c('strong',[_vm._v(_vm._s(_vm.version))]),_vm._v(" status: "),_c('strong',[_vm._v(_vm._s((_vm.connected === true) ? 'connected' : 'not connected'))]),_vm._v(".\n          "),(_vm.host)?[_c('br'),_vm._v("Host: "),_c('strong',[_vm._v(_vm._s(_vm.host))])]:_vm._e(),_vm._v(" "),(_vm.blockNumber)?[_c('br'),_vm._v("Latest block number: "),_c('strong',[_vm._v(_vm._s(_vm.blockNumber))])]:_vm._e()],2)])])]),_vm._v(" "),_c('section',{staticClass:"section"},[_c('div',{staticClass:"container"},[_c('div',{},[_c('button',{staticClass:"button is-small is-primary",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.previousPage($event)}}},[_vm._v("Previous")]),_vm._v(" "),_c('button',{staticClass:"button is-small is-info",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.nextPage($event)}}},[_vm._v("Next")]),_vm._v(" "),_c('page-dropdown',{attrs:{"buttonText":_vm.dropdownText,"items":_vm.dropdownItems},on:{"itemclick":_vm.changeHost,"inputChanged":_vm.changeHost}})],1)])]),_vm._v(" "),_c('section',{staticClass:"section"},[_c('transition',{attrs:{"appear":""}},[_c('router-view')],1)],1),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('page-notifications')],1)}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('footer',{staticClass:"footer"},[_c('div',{staticClass:"container"},[_c('p',[_vm._v("Made with "),_c('span',{staticClass:"bd-emoji"},[_vm._v("❤️")]),_vm._v(" by "),_c('strong',[_c('a',{attrs:{"href":"https://medium.com/@sc0vu","target":"_blank"}},[_vm._v("Peter Lai")])])]),_vm._v(" "),_c('p',[_vm._v("CSS framework: "),_c('strong',[_c('a',{attrs:{"href":"http://bulma.io/","target":"_blank"}},[_vm._v("bulma")])])]),_vm._v(" "),_c('p',[_vm._v("JS framework: "),_c('strong',[_c('a',{attrs:{"href":"https://vuejs.org/","target":"_blank"}},[_vm._v("vue")])])])])])}]
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+
 /***/ "4Vh3":
 /***/ (function(module, exports) {
 
@@ -126,6 +137,13 @@ module.exports = {"name":"istanbul","comment":"HF targeted for December 2019 fol
 /***/ (function(module, exports) {
 
 module.exports = {"2.16.840.1.101.3.4.1.1":"aes-128-ecb","2.16.840.1.101.3.4.1.2":"aes-128-cbc","2.16.840.1.101.3.4.1.3":"aes-128-ofb","2.16.840.1.101.3.4.1.4":"aes-128-cfb","2.16.840.1.101.3.4.1.21":"aes-192-ecb","2.16.840.1.101.3.4.1.22":"aes-192-cbc","2.16.840.1.101.3.4.1.23":"aes-192-ofb","2.16.840.1.101.3.4.1.24":"aes-192-cfb","2.16.840.1.101.3.4.1.41":"aes-256-ecb","2.16.840.1.101.3.4.1.42":"aes-256-cbc","2.16.840.1.101.3.4.1.43":"aes-256-ofb","2.16.840.1.101.3.4.1.44":"aes-256-cfb"}
+
+/***/ }),
+
+/***/ "8tBF":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -353,9 +371,9 @@ module.exports = {"_args":[["elliptic@6.4.1","/Users/chenqiguan/Desktop/opensour
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__("xJD8");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_573343d9_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__("gGZl");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_26e1d0df_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__("44Le");
 function injectStyle (ssrContext) {
-  __webpack_require__("tq/Q")
+  __webpack_require__("8tBF")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -373,7 +391,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_573343d9_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_26e1d0df_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -753,17 +771,6 @@ module.exports = {"sha224WithRSAEncryption":{"sign":"rsa","hash":"sha224","id":"
 
 /***/ }),
 
-/***/ "gGZl":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[(_vm.menuItems.length > 0)?_c('div',{staticClass:"container"},[_c('page-menu',{attrs:{"items":_vm.menuItems}})],1):_vm._e(),_vm._v(" "),_c('section',{staticClass:"hero is-primary"},[_c('div',{staticClass:"hero-body"},[_c('div',[_c('h1',{staticClass:"title"},[_vm._v("Vuethexplorer - vue + ethereum blockchain explorer.")]),_vm._v(" "),_c('h2',{staticClass:"subtitle"},[(_vm.isBeta)?[_c('strong',[_vm._v("Notice: the web3 is in beta version!")]),_c('br')]:_vm._e(),_vm._v("\n          Web3 "),_c('strong',[_vm._v(_vm._s(_vm.version))]),_vm._v(" status: "),_c('strong',[_vm._v(_vm._s((_vm.connected === true) ? 'connected' : 'not connected'))]),_vm._v(".\n          "),(_vm.host)?[_c('br'),_vm._v("Host: "),_c('strong',[_vm._v(_vm._s(_vm.host))])]:_vm._e(),_vm._v(" "),(_vm.blockNumber)?[_c('br'),_vm._v("Latest block number: "),_c('strong',[_vm._v(_vm._s(_vm.blockNumber))])]:_vm._e()],2)])])]),_vm._v(" "),_c('section',{staticClass:"section"},[_c('div',{staticClass:"container"},[_c('div',{},[_c('button',{staticClass:"button is-small is-primary",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.previousPage($event)}}},[_vm._v("Previous")]),_vm._v(" "),_c('button',{staticClass:"button is-small is-info",on:{"click":function($event){$event.preventDefault();if($event.target !== $event.currentTarget){ return null; }return _vm.nextPage($event)}}},[_vm._v("Next")]),_vm._v(" "),_c('page-dropdown',{attrs:{"buttonText":_vm.dropdownText,"items":_vm.dropdownItems},on:{"itemclick":_vm.changeHost,"inputChanged":_vm.changeHost}})],1)])]),_vm._v(" "),_c('section',[_c('transition',{attrs:{"appear":""}},[_c('router-view')],1)],1),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('page-notifications')],1)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('footer',{staticClass:"footer"},[_c('div',{staticClass:"container"},[_c('p',[_vm._v("Made with "),_c('span',{staticClass:"bd-emoji"},[_vm._v("❤️")]),_vm._v(" by "),_c('strong',[_c('a',{attrs:{"href":"https://medium.com/@sc0vu","target":"_blank"}},[_vm._v("Peter Lai")])])]),_vm._v(" "),_c('p',[_vm._v("CSS framework: "),_c('strong',[_c('a',{attrs:{"href":"http://bulma.io/","target":"_blank"}},[_vm._v("bulma")])])]),_vm._v(" "),_c('p',[_vm._v("JS framework: "),_c('strong',[_c('a',{attrs:{"href":"https://vuejs.org/","target":"_blank"}},[_vm._v("vue")])])])])])}]
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
 /***/ "gNtX":
 /***/ (function(module, exports) {
 
@@ -1074,13 +1081,6 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ "tq/Q":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "w4bG":
 /***/ (function(module, exports) {
 
@@ -1313,4 +1313,4 @@ module.exports = {"name":"tangerineWhistle","comment":"Hardfork with gas cost ch
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.9cca7379c239ed690132.js.map
+//# sourceMappingURL=app.ad51aff60d7a9e207dbf.js.map

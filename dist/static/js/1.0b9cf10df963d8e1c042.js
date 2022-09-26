@@ -1,5 +1,20 @@
 webpackJsonp([1],{
 
+/***/ "0nDq":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("FZ+f")(true);
+// imports
+
+
+// module
+exports.push([module.i, ".loading .button[data-v-53cc5a3a]{border:none}.loading .button[data-v-53cc5a3a]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/chenqiguan/Desktop/opensource/vuethexplore/src/views/Index.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Index.vue","sourcesContent":["\n.loading .button[data-v-53cc5a3a] {\n  border: none;\n}\n.loading .button[data-v-53cc5a3a]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "2m1i":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8,20 +23,6 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
-/***/ "MCq4":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("zdq9");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__("rjj0")("01d08fee", content, true, {});
 
 /***/ }),
 
@@ -60,7 +61,21 @@ var Component = normalizeComponent(
 
 /***/ }),
 
-/***/ "hrhx":
+/***/ "Oohb":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("0nDq");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__("rjj0")("109b5410", content, true, {});
+
+/***/ }),
+
+/***/ "krbl":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78,9 +93,9 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__ = __webpack_require__("tk/L");
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b44da6b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("hrhx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_53cc5a3a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("krbl");
 function injectStyle (ssrContext) {
-  __webpack_require__("MCq4")
+  __webpack_require__("Oohb")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -93,12 +108,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-1b44da6b"
+var __vue_scopeId__ = "data-v-53cc5a3a"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b44da6b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_53cc5a3a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -217,14 +232,14 @@ var Component = normalizeComponent(
     }
   }), Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* mapGetters */])(['connected'])),
   created: function created() {
-    if (this.$storage.isExist(this.keyPrefix + ':config.blockFromStorageKey') === true) {
-      this.from = parseInt(this.$storage.getItem(this.keyPrefix + ':config.blockFromStorageKey'), 10);
+    if (this.$storage.isExist(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey) === true) {
+      this.from = parseInt(this.$storage.getItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey), 10);
     }
-    if (this.$storage.isExist(this.keyPrefix + ':config.blockToStorageKey') === true) {
-      this.to = parseInt(this.$storage.getItem(this.keyPrefix + ':config.blockToStorageKey'), 10);
+    if (this.$storage.isExist(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey) === true) {
+      this.to = parseInt(this.$storage.getItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey), 10);
     }
-    if (this.$storage.isExist(this.keyPrefix + ':config.blockLimitStorageKey') === true) {
-      this.limit = parseInt(this.$storage.getItem(this.keyPrefix + ':config.blockLimitStorageKey'), 10);
+    if (this.$storage.isExist(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey) === true) {
+      this.limit = parseInt(this.$storage.getItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey), 10);
     }
   },
 
@@ -306,20 +321,20 @@ var Component = normalizeComponent(
       batch.execute();
 
       // save from and in to storage
-      this.$storage.setItem(this.keyPrefix + ':config.blockFromStorageKey', from);
-      this.$storage.setItem(this.keyPrefix + ':config.blockToStorageKey', to);
+      this.$storage.setItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey, from);
+      this.$storage.setItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey, to);
     },
     updateFrom: function updateFrom(from) {
       this.from = from;
-      this.$storage.setItem(this.keyPrefix + ':config.blockFromStorageKey', from);
+      this.$storage.setItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockFromStorageKey, from);
     },
     updateTo: function updateTo(to) {
       this.to = to;
-      this.$storage.setItem(this.keyPrefix + ':config.blockToStorageKey', to);
+      this.$storage.setItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockToStorageKey, to);
     },
     updateLimit: function updateLimit(limit) {
       this.limit = limit;
-      this.$storage.setItem(this.keyPrefix + ':config.blockLimitStorageKey', limit);
+      this.$storage.setItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey, limit);
     }
   }),
   watch: {
@@ -356,7 +371,7 @@ var Component = normalizeComponent(
           this.limit = oldVal;
           return;
         }
-        this.$storage.setItem(this.keyPrefix + ':config.blockLimitStorageKey', val);
+        this.$storage.setItem(this.keyPrefix + ':' + __WEBPACK_IMPORTED_MODULE_2__config___default.a.blockLimitStorageKey, val);
         if (this.from - this.to > this.limit) {
           this.to = this.from - val;
           return;
@@ -409,22 +424,7 @@ var Component = normalizeComponent(
   }
 });
 
-/***/ }),
-
-/***/ "zdq9":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("FZ+f")(true);
-// imports
-
-
-// module
-exports.push([module.i, ".loading .button[data-v-1b44da6b]{border:none}.loading .button[data-v-1b44da6b]:hover{cursor:auto}", "", {"version":3,"sources":["/Users/chenqiguan/Desktop/opensource/vuethexplore/src/views/Index.vue"],"names":[],"mappings":"AACA,kCACE,WAAa,CACd,AACD,wCACE,WAAgB,CACjB","file":"Index.vue","sourcesContent":["\n.loading .button[data-v-1b44da6b] {\n  border: none;\n}\n.loading .button[data-v-1b44da6b]:hover {\n  cursor: initial;\n}\n"],"sourceRoot":""}]);
-
-// exports
-
-
 /***/ })
 
 });
-//# sourceMappingURL=1.744eb7c89772451941be.js.map
+//# sourceMappingURL=1.0b9cf10df963d8e1c042.js.map
