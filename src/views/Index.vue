@@ -98,14 +98,14 @@ export default {
     ]),
   },
   created () {
-    if (this.$storage.isExist(`${this.keyPrefix}:config.blockFromStorageKey`) === true) {
-      this.from = parseInt(this.$storage.getItem(`${this.keyPrefix}:config.blockFromStorageKey`), 10);
+    if (this.$storage.isExist(`${this.keyPrefix}:${config.blockFromStorageKey}`) === true) {
+      this.from = parseInt(this.$storage.getItem(`${this.keyPrefix}:${config.blockFromStorageKey}`), 10);
     }
-    if (this.$storage.isExist(`${this.keyPrefix}:config.blockToStorageKey`) === true) {
-      this.to = parseInt(this.$storage.getItem(`${this.keyPrefix}:config.blockToStorageKey`), 10);
+    if (this.$storage.isExist(`${this.keyPrefix}:${config.blockToStorageKey}`) === true) {
+      this.to = parseInt(this.$storage.getItem(`${this.keyPrefix}:${config.blockToStorageKey}`), 10);
     }
-    if (this.$storage.isExist(`${this.keyPrefix}:config.blockLimitStorageKey`) === true) {
-      this.limit = parseInt(this.$storage.getItem(`${this.keyPrefix}:config.blockLimitStorageKey`), 10);
+    if (this.$storage.isExist(`${this.keyPrefix}:${config.blockLimitStorageKey}`) === true) {
+      this.limit = parseInt(this.$storage.getItem(`${this.keyPrefix}:${config.blockLimitStorageKey}`), 10);
     }
   },
   methods: {
@@ -185,20 +185,20 @@ export default {
       batch.execute();
 
       // save from and in to storage
-      this.$storage.setItem(`${this.keyPrefix}:config.blockFromStorageKey`, from);
-      this.$storage.setItem(`${this.keyPrefix}:config.blockToStorageKey`, to);
+      this.$storage.setItem(`${this.keyPrefix}:${config.blockFromStorageKey}`, from);
+      this.$storage.setItem(`${this.keyPrefix}:${config.blockToStorageKey}`, to);
     },
     updateFrom (from) {
       this.from = from;
-      this.$storage.setItem(`${this.keyPrefix}:config.blockFromStorageKey`, from);
+      this.$storage.setItem(`${this.keyPrefix}:${config.blockFromStorageKey}`, from);
     },
     updateTo (to) {
       this.to = to;
-      this.$storage.setItem(`${this.keyPrefix}:config.blockToStorageKey`, to);
+      this.$storage.setItem(`${this.keyPrefix}:${config.blockToStorageKey}`, to);
     },
     updateLimit (limit) {
       this.limit = limit;
-      this.$storage.setItem(`${this.keyPrefix}:config.blockLimitStorageKey`, limit);
+      this.$storage.setItem(`${this.keyPrefix}:${config.blockLimitStorageKey}`, limit);
     },
   },
   watch: {
@@ -241,7 +241,7 @@ export default {
           this.limit = oldVal;
           return;
         }
-        this.$storage.setItem(`${this.keyPrefix}:config.blockLimitStorageKey`, val);
+        this.$storage.setItem(`${this.keyPrefix}:${config.blockLimitStorageKey}`, val);
         if (this.from - this.to > this.limit) {
           this.to = this.from - val;
           return;
